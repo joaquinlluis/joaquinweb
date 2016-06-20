@@ -1,15 +1,93 @@
-!!!
+!!! 5
 %html
   %head
-    %title StaticMatic
-    = stylesheets
-    %script{:src => "http://code.jquery.com/jquery-latest.min.js"}
-    %script{:src => "slider.js"}
+    %title Joaquín Lluis - Website
+    %link{:href => "style.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %meta{ :http_equiv => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+    %meta{ :charset => "UTF-8" }
+    %script{:src => "js/jquery-latest.min.js"}
+    %script{:src => "js/slider.js"}
+    %link{:href => "https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,600,700", :rel => "stylesheet", :type => "text/css"}/
 
   %body
+    %section
+      %header
+        %h1.logo
+          Joaquín Lluis
+        %nav
+          %ul
+            %li
+              %a{:href => "#"} Blog
+            %li
+              %a{:href => "#"} Curriculum
+            %li
+              %a{:href => "#"} Contact
+      #slider.one
+      .next
+      .prev
+    %main
+      .container.section-menu
+        %nav
+          %ul.flex
+            %li.active Intro
+            %li UI Design
+            %li UX Design
+            %li Illustration
+            %li Teaching
+            %li Frontend
+            %li Music
+      .container.section-content
+        .row.flex
+          .image
+            %img{:src => "img/face.jpg", :alt => "asdasd"}/
+          .text
+            %h2
+              Hi! I’m Joaquín Lluis a Designer
+            %h3
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              %br/
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+            %button Next section >
+    %section.work
+      .container
+        %h2 My work as a Designer
+        %p A little sneak peak of some designs that I like
+      .container
+        .row.flex
+          .project
+            .shot
+            .title
+              %h4 asdasd
+              %p asdasd
+          .project
+            .shot
+            .title
+              %h4 asdasd
+              %p asdasd
+          .project
+            .shot
+            .title
+              %h4 asdasd
+              %p asdasd
 
-    #container.one
-      %h1
-      %img{:src => "img/1.svg", :alt => ""}/
-    .next
-    .prev
+
+
+    %footer
+      .container.flex
+        %ul
+          %li
+            %a{:href => ""}
+              %i.fa.fa-github
+          %li
+            %a{:href => ""}
+              %i.fa.fa-dribbble
+          %li
+            %a{:href => ""}
+              %i.fa.fa-instagram
+        %p ©2016. All rights reserved.
+
+
+
