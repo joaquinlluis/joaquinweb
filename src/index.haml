@@ -10,37 +10,53 @@
     %script{:src => "js/slider.js"}
     %link{:href => "https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,600,700", :rel => "stylesheet", :type => "text/css"}/
 
-  %body
+  %body#body.intro
     %section
-      %header
-        %h1.logo
-          Joaquín Lluis
-        %nav
-          %ul
-            %li
-              %a{:href => "#"} Blog
-            %li
-              %a{:href => "#"} Curriculum
-            %li
-              %a{:href => "#"} Contact
-      #slider.one
-      .next
-      .prev
+      #slider.intro
+        %header
+          %h1.logo
+            Joaquín Lluis
+          %nav
+            %ul
+              %li
+                %a{:href => "#"} Blog
+              %li
+                %a{:href => "#"} Curriculum
+              %li
+                %a{:href => "#"} Contact
+        .next
+        .prev
+        .slide-content
+          %img{:src => "img/character.svg", :alt => ""}/
+        .slide-title
+          %h2
+            Hi! I’m a Designer
+          %a{:href => "#"}
+            Learn more
+
+
     %main
       .container.section-menu
         %nav
-          %ul.flex
-            %li.active Intro
-            %li UI Design
-            %li UX Design
-            %li Illustration
-            %li Teaching
-            %li Frontend
-            %li Music
+          %ul.row.flex
+            %li.active
+              %a{:href => "#"}Intro
+            %li
+              %a{:href => "#"} UI Design
+            %li
+              %a{:href => "#"} UX Design
+            %li
+              %a{:href => "#"} Illustration
+            %li
+              %a{:href => "#"} Teaching
+            %li
+              %a{:href => "#"} Frontend
+            %li
+              %a{:href => "#"} Music
       .container.section-content
         .row.flex
           .image
-            %img{:src => "img/face.jpg", :alt => "asdasd"}/
+            %img{:src => "img/face.jpg", :alt => "photo of my face"}/
           .text
             %h2
               Hi! I’m Joaquín Lluis a Designer
@@ -57,22 +73,38 @@
         %p A little sneak peak of some designs that I like
       .container
         .row.flex
-          .project
+          %a.project{:href => "#"}
             .shot
+              %img{:src => "img/face.jpg", :alt => ""}/
             .title
-              %h4 asdasd
-              %p asdasd
-          .project
+              %h4 Lorem ipsum dolore
+              %p Lorem ipsum dolore
+          %a.project{:href => "#"}
             .shot
+              %img{:src => "img/face.jpg", :alt => ""}/
             .title
-              %h4 asdasd
-              %p asdasd
-          .project
+              %h4 Lorem ipsum dolore
+              %p Lorem ipsum dolore
+          %a.project{:href => "#"}
             .shot
+              %img{:src => "img/face.jpg", :alt => ""}/
             .title
-              %h4 asdasd
-              %p asdasd
+              %h4 Lorem ipsum dolore
+              %p Lorem ipsum dolore
+      .container.flex
+        %button
+          %i.fa.fa-dribbble
+          View more on Dribbble
 
+    %section.cv
+      .container.flex.fdc
+        .image
+          %img{:src => "img/face.jpg", :alt => ""}/
+        %h2 Do you want to see more?
+        %p Here's my CV for you to download it
+        %button
+          %i.fa.fa-cloud-download
+          Download here!
 
 
     %footer
@@ -88,6 +120,7 @@
             %a{:href => ""}
               %i.fa.fa-instagram
         %p ©2016. All rights reserved.
+        %p
 
 
 

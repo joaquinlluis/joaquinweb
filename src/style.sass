@@ -1,3 +1,7 @@
+// IMPORTS
+
+@import "variables.sass"
+
 // MISC STYLES
 
 html, *
@@ -9,7 +13,6 @@ html, *
 
 a
   color: inherit
-  display: block
   cursor: pointer
 
 ::selection,
@@ -34,8 +37,45 @@ body
 #slider
   width: 100%
   min-height: 100vh
+  background: #666
+  position: relative
   display: flex
-  background: #3498db
+  flex-direction: column
+  align-items: center
+  align-content: center
+  justify-content: center
+
+  .slide-content
+    max-width: 200px
+    width: 100%
+  .slide-title
+    position: absolute
+    width: 100%
+    left: 0
+    bottom: 13%
+    text-align: center
+    h2
+      color: #fff
+      font-size: 25px
+      margin-bottom: 5px
+    a
+      color: #fff
+      opacity: 0.6
+      position: relative
+      &:after, &:before
+        content: ''
+        width: 8px
+        height: 8px
+        top: 16px
+        left: 50%
+        position: absolute
+        transform: rotate(-45deg) translateX(-50%)
+        border-bottom: 2px solid #fff
+        border-left: 2px solid #fff
+      &:before
+        top: 22px
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5)
+        border-left: 2px solid rgba(255, 255, 255, 0.5)
 
 .next,
 .prev
@@ -47,11 +87,25 @@ body
   transform: translateY(-50%)
   cursor: pointer
   border-radius: 50%
-  border: 4px solid #fff
+  border: 3px solid #fff
+  &:before
+    content: ''
+    width: 8px
+    height: 8px
+    top: 38%
+    left: 40%
+    position: absolute
+    transform: rotate(45deg)
+    border-bottom: 3px solid rgba(255, 255, 255, 0.8)
+    border-left: 3px solid rgba(255, 255, 255, 0.8)
+
 .prev
   left: 50px
 .next
   right: 50px
+  &:before
+    left: 33%
+    transform: rotate(225deg)
 
 // CONTAINERS
 
@@ -60,17 +114,21 @@ main
   width: 100%
 .flex
   display: flex
+.fdc
+  flex-direction: column
 
 .container
   width: 100%
   max-width: 1140px
   margin: auto
   padding: 0 20px
+  position: relative
 .row
   margin: 0 -20px
 
 header
   position: absolute
+  top: 0
   width: 100%
   padding: 25px 50px
   ul
@@ -82,21 +140,25 @@ header
 
 main
   margin: 45px 0 100px
+
+// MAIN CONTENT
+
 .section-menu
   nav ul
     justify-content: space-around
     li
-      flex: 1
+      flex: auto
       color: #ccc
-      padding-bottom: 15px
       border-bottom: 3px solid #f2f2f2
       text-align: center
       margin: 0 7.5px
-    li.active
-      color: #3498db
-      font-weight: 500
-      border-bottom: 3px solid #3498db
-
+      &:hover, &.active
+        color: #666
+        font-weight: 500
+        border-bottom: 3px solid #666
+      a
+        display: block
+        padding-bottom: 15px
 
 .section-content
   margin-top: 50px
@@ -112,45 +174,71 @@ main
   flex: 2
   padding: 0 20px
   h2
-    color: #3498db
+    color: #666
   h3
     color: #999
   p
     margin-bottom: 35px
 
-.work
+// WORK CV
+
+.work, .cv
   background: #f2f2f2
   padding: 100px 0 130px 0
   h2, p
     text-align: center
-  p
-    margin-bottom: 40px
-
+.work
+  button
+    background: #666!important
+    margin: 40px auto 0
 .project
   flex: 1
   padding: 0 20px
+  margin-top: 50px
   .shot
     width: 100%
-    padding-bottom: 60%
-    background: #ccc
+    img
+      border-radius: 5px 5px 0 0
   .title
     background: #fff
     width: 100%
-    padding: 20px
+    padding: 25px 20px
+    border-radius: 0 0 5px 5px
+    h4
+      font-size: 20px
+      font-weight: 600
+    p
+      text-align: left
+
+.cv
+  background: #fff
+  h2, p, button
+    margin: auto
+  p
+    margin-bottom: 30px
+
+// FOOTER
 
 footer
   padding: 30px 0
-  background: #3498db
+  background: #666
   color: #fff
+  .container
+    align-items: center
   ul li
     font-size: 1.5rem
     background: rgba(0,0,0,0.1)
     padding: 10px 15px
     display: inline-block
     border-radius: 50%
-
-
-
+    a
+      display: block
+  ul
+    flex: 1
+  p
+    flex: 1
+    font-size: 0.95rem
+    text-align: center
 
 // ELEMENTS
 
@@ -168,11 +256,28 @@ button
   font-size: 1rem
   padding: 15px 20px
   border: 0
-  background: #3498db
+  background: #666
   color: #fff
   border-radius: 5px
   cursor: pointer
+  i
+    color: rgba(0,0,0,0.2)
 
+// UI CHANGES
 
+.intro
+  +ui-colors($color-intro)
+.ui
+  +ui-colors($color-ui)
+.ux
+  +ui-colors($color-ux)
+.illus
+  +ui-colors($color-illus)
+.teach
+  +ui-colors($color-teach)
+.front
+  +ui-colors($color-front)
+.music
+  +ui-colors($color-music)
 
 

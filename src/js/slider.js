@@ -1,6 +1,6 @@
 $(document).ready(function(){
   var step = 0;
-  var classes = ["one", "two", "three", "four"];
+  var classes = ["intro", "ui", "ux", "illus", "teach", "front", "music"];
 
   $('.next').click(function(){
     if(step == classes.length - 1 ) {
@@ -10,6 +10,8 @@ $(document).ready(function(){
     }
     $('#slider').removeClass();
     $('#slider').addClass( classes[step] );
+    $('#body').removeClass();
+    $('#body').addClass( classes[step] );
   });
   $('.prev').click(function(){
     if(step == 0) {
@@ -19,5 +21,7 @@ $(document).ready(function(){
     }
     $('#slider').removeClass();
     $('#slider').addClass( classes[step] );
+    $('#body').removeClass();
+    $('#body').addClass( classes[step] );
   });
 });

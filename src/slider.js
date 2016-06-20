@@ -8,8 +8,8 @@ $(document).ready(function(){
     } else {
       step++;
     }
-    $('#slider').removeClass();
-    $('#slider').addClass( classes[step] );
+    $('#container').removeClass();
+    $('#container').addClass( classes[step] );
   });
   $('.prev').click(function(){
     if(step == 0) {
@@ -17,7 +17,7 @@ $(document).ready(function(){
     } else {
       step--;
     }
-    $('#slider').removeClass();
-    $('#slider').addClass( classes[step] );
+    $('#container').removeClass();
+    $('#container').addClass( classes[step] );
   });
 });
