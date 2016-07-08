@@ -25,15 +25,20 @@ body
   font-size: 18px
   font-weight: 400
   color: #666
-  height: 100vh
   min-height: 100vh
-  max-height: 100vh
   display: flex
   flex-direction: column
+  +desktop
+    height: 100vh
+    max-height: 100vh
+
 
 .main-wrapper
   display: flex
+  flex-direction: column
   flex: 1
+  +desktop
+    flex-direction: row
   section
     flex: 1
-
+    transition: all 0.5s ease

@@ -7,10 +7,20 @@
     color: $ui-color
   .section-menu nav ul li.active
     background: darken($ui-color, 4%)
-  .portfolio
+  .portfolio, .social-net ul li, .next:hover, .prev:hover, .menu-mobile li a
     background: darken($ui-color, 4%)
   .navigation-content
     background: lighten($ui-color, 3%)
+
+$tablet-width: 768px
+$desktop-width: 1024px
+=tablet
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+    @content
+=desktop
+  @media (min-width: #{$desktop-width})
+    @content
+
 // VARIABLES
 $color-intro: #E55757
 $color-ui: #77cc62
