@@ -3,11 +3,14 @@
 =ui-colors($ui-color)
   #slider, button, footer
     background: $ui-color
-  .text h2, .section-menu nav ul li.active
+  .text h2
     color: $ui-color
   .section-menu nav ul li.active
-    border-color: $ui-color
-
+    background: darken($ui-color, 4%)
+  .portfolio
+    background: darken($ui-color, 4%)
+  .navigation-content
+    background: lighten($ui-color, 3%)
 // VARIABLES
 $color-intro: #E55757
 $color-ui: #77cc62

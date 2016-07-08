@@ -6,11 +6,8 @@
 
 // CONTAINERS
 
-section,
-main
+section
   width: 100%
-main
-  padding: 0 0 100px 0
 .flex
   display: flex
 .fdc
@@ -25,49 +22,71 @@ main
 .row
   margin: 0 -20px
 
-header
-  position: absolute
-  top: 0
-  width: 100%
-  padding: 25px 50px
-  ul
-    float: right
-    li
-      color: #fff
-      display: inline-block
-      margin-left: 15px
 
 // MAIN CONTENT
 
 .section-menu
-  height: 10vh
-  padding-top: 10px
+  height: 50px
   nav ul
     justify-content: space-around
     li
+      padding-top: 13px
       flex: auto
+      background: #f2f2f2
       color: #ccc
-      border-bottom: 3px solid #f2f2f2
       text-align: center
-      margin: 0 7.5px
-      &:hover, &.active
-        color: #666
+      height: 50px
+      transition: all 0.5s ease
+      &.active
+        color: #fff
         font-weight: 500
-        border-bottom: 3px solid #666
+      &:hover
+        background: #e5e5e5
       a
         display: block
         padding-bottom: 15px
 
+.content-portfolio
+  display: flex
+  flex-direction: column
+
+// Navigation-content
+.navigation-content
+  background: #ccc
+  padding: 30px
+  flex: 2!important
+  ul li
+    width: 100%
+    border-bottom: 2px solid #fff
+    &:first-child
+      border-top: 2px solid #fff
+    a
+    color: #fff
+    padding: 5px 0
+
+// Text content
+.text-content
+  height: 100%
+  flex: 4!important
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%)
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 )
+    width: 100%
+    height: 15%
+    bottom: 0
+    left: 0
+
 .section-content
+  overflow-x: hidden
+  overflow-y: auto
+  height: 100%
   display: none
-  margin-top: 50px
-.image
-  flex: 1
-  padding: 0 20px
-  text-align: center
-  img
-    border-radius: 50%
-    max-width: 275px
+  padding: 30px 20px
 
 .text
   flex: 2
@@ -80,17 +99,22 @@ header
     color: #999
     margin-bottom: 35px
 
-// WORK CV
+// PORTFOLIO
 
-.work, .cv
+.portfolio
   background: #f2f2f2
-  padding: 100px 0 130px 0
+  padding: 30px 0
+
+  max-height: 120px
   h2, p
     text-align: center
-.work
+    color: #fff
+.portfolio
   button
     background: #666!important
     margin: 40px auto 0
+
+// PROJECT
 .project
   flex: 1
   padding: 0 20px
@@ -110,21 +134,9 @@ header
     p
       text-align: left
 
-.cv
-  background: #fff
-  h2, p, button
-    margin: auto
-  p
-    margin-bottom: 30px
-  .image
-    margin-bottom: 20px
-    img
-      border-radius: 50%
-      max-width: 200px
 
 
 // FOOTER
-
 footer
   padding: 30px 0
   background: #666
@@ -148,8 +160,6 @@ footer
 
 // ELEMENTS
 
-h1.logo
-  font-size: 0
 h2
   font-size: 1.77rem
   font-weight: 600
