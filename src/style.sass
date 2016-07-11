@@ -33,13 +33,17 @@ section
   nav ul
     justify-content: space-around
     li
-      padding-top: 13px
+      font-size: 15px
+      cursor: pointer
       flex: auto
       background: #f2f2f2
-      color: #ccc
+      color: #bbb
       text-align: center
       height: 50px
       transition: all 0.5s ease
+      display: flex
+      align-items: center
+      justify-content: center
       &.active
         color: #fff
         font-weight: 500
@@ -47,7 +51,6 @@ section
         background: #e5e5e5
       a
         display: block
-        padding-bottom: 15px
 
 .menu-mobile
   position: fixed
@@ -70,6 +73,8 @@ section
 .content-portfolio
   display: flex
   flex-direction: column
+  position: relative
+  overflow: hidden
   .flex
     flex-direction: column
     +tablet
@@ -96,9 +101,13 @@ section
     &:first-child
       border-top: 2px solid #fff
     a
-    color: #fff
-    padding: 10px 0
-
+      display: block
+      color: rgba(255,255,255,0.8)
+      padding: 10px 0
+      transition: all 0.5s ease
+      &.active, &:hover
+        color: white
+        padding-left: 10px
 // SOCIAL
 .social-net
   color: #fff
@@ -107,12 +116,14 @@ section
     padding: 35px 0 0 0
   ul li
     font-size: 1.5rem
-    background: rgba(0,0,0,0.1)
-    padding: 10px 15px
     display: inline-block
-    border-radius: 50%
     a
+      padding: 11px 15px
+      height: 50px
+      width: 50px
       display: block
+      border-radius: 50%
+      text-align: center
   ul
     flex: 1
   p
@@ -120,38 +131,124 @@ section
     font-size: 0.95rem
     text-align: center
 
-// Text content
+//SECTION EXPAND
+.close-button
+  position: absolute
+  top: 20px
+  right: 20px
+  width: 40px
+  height: 40px
+  background: rgba(0,0,0,0.1)
+  border-radius: 50%
+  &:after
+    content: ''
+    width: 10px
+    height: 10px
+    top: 35%
+    left: 40%
+    position: absolute
+    transform: rotate(45deg)
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8)
+    border-left: 2px solid rgba(255, 255, 255, 0.8)
+
+.section-cv, .section-contact, .section-portfolio
+  position: absolute
+  width: 100%
+  height: 100%
+  background: #fff
+  padding: 30px
+  top: 0
+  left: 0
+  z-index: 2
+  text-align: center
+  transition: all 0.5s ease
+  transform: translateX(-100%)
+  &.active
+    opacity: 1
+    transform: translateX(0)
+
+// CV SECTION
+.section-cv
+  .image img
+    border-radius: 50%
+    max-width: 150px
+    margin: 30px 0 10px 0
+  h2
+    line-height: 100%
+    margin-bottom: 10px
+  p
+    margin-bottom: 25px
+
+// CONTACT SECTION
+.section-contact
+  .image img
+    border-radius: 50%
+    max-width: 150px
+    margin: 30px 0 10px 0
+  h2
+    line-height: 100%
+    margin-bottom: 10px
+  p
+    margin-bottom: 25px
+
+// PORTFOLIO SECTION
+.section-portfolio
+  transform: translateY(100%)
+  &.active
+    transform: translateX(0)
+  .image img
+    border-radius: 50%
+    max-width: 150px
+    margin: 30px 0 10px 0
+  h2
+    color: #fff
+    line-height: 100%
+    margin-bottom: 5px
+  p
+    color: #fff
+    margin-bottom: 25px
+  .close-button:after
+    left: 35%
+    top: 30%
+    transform: rotate(-45deg)
+    border-bottom: 2px solid #fff!important
+    border-left: 2px solid #fff!important
+
+
+// TEXT CONTENT
 .text-content
   height: 100%
   flex: 4!important
   position: relative
+  overflow: hidden
   &:after
     content: ''
     position: absolute
-    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
-    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 )
+    -webkit-box-shadow: 0px -10px 45px 30px rgba(255,255,255,1)
+    -moz-box-shadow: 0px -10px 45px 30px rgba(255,255,255,1)
+    box-shadow: 0px -10px 45px 30px rgba(255,255,255,1)
     width: 100%
-    height: 15%
+    height: 0px
     bottom: 0
     left: 0
 
-.section-content
-  overflow-x: hidden
-  overflow-y: auto
-  height: 100%
-  display: none
-  padding: 30px 20px
+  .section-content
+    overflow-x: hidden
+    overflow-y: auto
+    height: 100%
+    display: none
+    padding: 30px 20px
 
 .text
   flex: 2
   padding: 0 20px
   h2
     color: #666
-  h3
-    color: #999
+
   p
+    margin-top: 15px
+    border-top: 1px solid #eee
+    padding-top: 15px
     color: #999
     margin-bottom: 35px
 
@@ -173,6 +270,7 @@ section
     margin: 40px auto 0
 
 // PROJECT
+
 .project
   flex: 1
   padding: 0 20px
@@ -196,12 +294,10 @@ section
 // ELEMENTS
 
 h2
-  font-size: 1.77rem
+  font-size: 2rem
+  line-height: 110%
   font-weight: 600
-h3
-  font-size: 1.38rem
-  font-weight: 500
-  margin: 10px 0 15px 0
+
 
 button
   font-size: 1rem
@@ -213,6 +309,7 @@ button
   cursor: pointer
   i
     color: rgba(0,0,0,0.2)
+
 
 // UI CHANGES
 
