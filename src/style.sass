@@ -3,6 +3,7 @@
 @import "partials/variables.sass"
 @import "partials/_misc.sass"
 @import "partials/_slider.sass"
+@import "partials/_animations.sass"
 
 // CONTAINERS
 
@@ -91,6 +92,10 @@ section
   padding: 30px
   flex: 2!important
   order: 1
+  +desktop
+    +animation(appearfromleft 0.6s)
+    +animation-attr
+    transform-origin: center
   +tablet
     order: 0
   +desktop
@@ -108,6 +113,7 @@ section
       &.active, &:hover
         color: white
         padding-left: 10px
+
 // SOCIAL
 .social-net
   color: #fff
@@ -203,17 +209,83 @@ section
   h2
     color: #fff
     line-height: 100%
-    margin-bottom: 5px
   p
     color: #fff
     margin-bottom: 25px
-  .close-button:after
-    left: 35%
-    top: 30%
-    transform: rotate(-45deg)
-    border-bottom: 2px solid #fff!important
-    border-left: 2px solid #fff!important
+    font-size: 16px
 
+  hr
+    border: none
+    width: 100%
+    height: 2px
+    background: rgba(255,255,255,0.05)
+    margin: 30px 0 35px
+
+  .close-button
+    top: 35px
+    right: 35px
+    &:after
+      left: 35%
+      top: 30%
+      transform: rotate(-45deg)
+      border-bottom: 2px solid #fff!important
+      border-left: 2px solid #fff!important
+  .container.flex
+    flex-direction: column
+  .dribbble
+    margin: 0 auto
+
+// PORTFOLIO
+
+.portfolio
+  background: #f2f2f2
+  padding: 30px 15px
+  max-height: 115px
+  margin-bottom: 60px
+  +desktop
+    +animation(appearfrombottom 0.6s)
+    +animation-attr
+    transform-origin: center
+  +desktop
+    margin-bottom: 0
+  h2, p
+    text-align: left
+    color: #fff
+  .eye
+    float: left
+    margin-right: 10px
+    height: 55px
+    width: 55px
+    padding: 16px 0
+    background: rgba(255,255,255,0.2)
+    border-radius: 50%
+    text-align: center
+    i
+      display: block
+      color: #fff
+      font-size: 21px
+
+.portfolio
+  button
+    background: #666!important
+    margin: 40px auto 0
+
+// PROJECT
+
+.project
+  flex: 1
+  padding: 0 20px
+  .shot
+    width: 100%
+    img
+      border-radius: 50%
+  .title
+    width: 100%
+    padding: 10px 20px
+    h4
+      color: #fff
+      font-size: 20px
+      font-weight: 500
 
 // TEXT CONTENT
 .text-content
@@ -238,12 +310,21 @@ section
     height: 100%
     display: none
     padding: 30px 20px
+    +desktop
+      +animation(fadeintop 0.6s)
+      +animation-attr
+      transform-origin: center
 
 .text
   flex: 2
   padding: 0 20px
   h2
     color: #666
+    sup
+      color: #ccc
+      font-size: 13px
+      font-weight: 400
+      display: inline-block
 
   p
     margin-top: 15px
@@ -252,43 +333,6 @@ section
     color: #999
     margin-bottom: 35px
 
-// PORTFOLIO
-
-.portfolio
-  background: #f2f2f2
-  padding: 30px 25px
-  max-height: 115px
-  margin-bottom: 60px
-  +desktop
-    margin-bottom: 0
-  h2, p
-    text-align: left
-    color: #fff
-.portfolio
-  button
-    background: #666!important
-    margin: 40px auto 0
-
-// PROJECT
-
-.project
-  flex: 1
-  padding: 0 20px
-  margin-top: 50px
-  .shot
-    width: 100%
-    img
-      border-radius: 5px 5px 0 0
-  .title
-    background: #fff
-    width: 100%
-    padding: 25px 20px
-    border-radius: 0 0 5px 5px
-    h4
-      font-size: 20px
-      font-weight: 600
-    p
-      text-align: left
 
 
 // ELEMENTS
