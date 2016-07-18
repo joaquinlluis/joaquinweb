@@ -9,6 +9,7 @@
     %meta{ :charset => "UTF-8" }
     %script{:src => "js/jquery-latest.min.js"}
     %script{:src => "js/slider.js"}
+    %script{:src => "js/svg-injector.js"}
     //%link{:href => "https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,600,700", :rel => "stylesheet", :type => "text/css"}/
 
   %body#body.intro
@@ -46,19 +47,19 @@
           .next
           .prev
           .slide-content.intro-slide
-            %img{:src => "slider/intro.svg", :alt => ""}/
+            %img.inject-me{:src => "slider/intro.svg", :alt => ""}/
           .slide-content.ui-slide
-            %img{:src => "slider/ui.svg", :alt => ""}/
+            %img.inject-me{:src => "slider/ui.svg", :alt => ""}/
           .slide-content.ux-slide
-            %img{:src => "slider/ux.svg", :alt => ""}/
+            %img.inject-me{:src => "slider/ux.svg", :alt => ""}/
           .slide-content.illus-slide
-            %img{:src => "slider/illus.svg", :alt => ""}/
+            %img.inject-me{:src => "slider/illus.svg", :alt => ""}/
           .slide-content.teach-slide
-            %img{:src => "slider/teach.svg", :alt => ""}/
+            %img.inject-me{:src => "slider/teach.svg", :alt => ""}/
           .slide-content.front-slide
-            %img{:src => "slider/front.svg", :alt => ""}/
+            %img.inject-me{:src => "slider/front.svg", :alt => ""}/
           .slide-content.music-slide
-            %img{:src => "slider/music.svg", :alt => ""}/
+            %img.inject-me{:src => "slider/music.svg", :alt => ""}/
 
           .slide-title
             %h2.intro-slide
@@ -262,6 +263,11 @@
         }
         });
         });
+      %script
+        // Elements to inject
+        var mySVGsToInject = document.querySelectorAll('img.inject-me');
+        // Do the injection
+        SVGInjector(mySVGsToInject);
 
 
 
