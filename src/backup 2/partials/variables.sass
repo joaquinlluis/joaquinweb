@@ -1,0 +1,86 @@
+
+//UI MIXIN
+=ui-colors($ui-color)
+  #slider, button, footer
+    background: $ui-color
+  .text h2, .section-cv h2
+    color: $ui-color
+  .section-menu nav ul li.active
+    background: darken($ui-color, 4%)
+  .portfolio, .social-net ul li a, .next:hover, .prev:hover, .menu-mobile li a, .section-portfolio
+    background: darken($ui-color, 4%)
+  .social-net ul li a:hover, button:hover, .portfolio:hover, .section-portfolio .close-button:hover
+    background: darken($ui-color, 6%)
+  .section-portfolio .close-button
+    background: darken($ui-color, 10%)
+  .navigation-content, h1
+    background: lighten($ui-color, 3%)
+  .close-button:after
+    border-bottom: 2px solid $ui-color
+    border-left: 2px solid $ui-color
+  .close-button
+    background: lighten($ui-color, 20%)
+    &:hover
+      background: lighten($ui-color, 10%)
+  .navigation-content nav ul li
+    border-bottom: 2px solid darken($ui-color, 1%)
+    &:first-child
+      border-top: 2px solid darken($ui-color, 1%)
+    i
+      color: darken($ui-color, 2%)
+  .eye i
+    color: darken($ui-color, 4%)
+
+//MEDIA QUERIE MIXIN
+$tablet-width: 768px
+$desktop-width: 1024px
+=tablet
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+    @content
+=desktop
+  @media (min-width: #{$desktop-width})
+    @content
+
+// ANIMATION MIXIN
+=animation-attr
+  -webkit-animation-timing-function: linear
+  animation-timing-function: linear
+  -webkit-animation-fill-mode: forwards
+  -moz-animation-fill-mode: forwards
+  -o-animation-fill-mode: forwards
+  -ms-animation-fill-mode: forwards
+  animation-fill-mode: forwards
+  transform-origin: center
+  -webkit-transition-timing-function: ease-in-out
+  -moz-transition-timing-function: ease-in-out
+  -ms-transition-timing-function: ease-in-out
+  -o-transition-timing-function: ease-in-out
+  transition-timing-function: ease-in-out
+
+=keyframes($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+  @-moz-keyframes #{$animation-name}
+    @content
+  @-ms-keyframes #{$animation-name}
+    @content
+  @-o-keyframes #{$animation-name}
+    @content
+  @keyframes #{$animation-name}
+    @content
+
+=animation($str)
+  -webkit-animation: #{$str}
+  -moz-animation: #{$str}
+  -ms-animation: #{$str}
+  -o-animation: #{$str}
+  animation: #{$str}
+
+// VARIABLES
+$color-intro: #E55757
+$color-ui: #77cc62
+$color-ux: #ffaa00
+$color-illus: #a477bc
+$color-teach: #f46b18
+$color-front: #59bad8
+$color-music: #939393

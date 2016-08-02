@@ -9,6 +9,8 @@
     <meta charset='UTF-8' />
     <script src='js/jquery-latest.min.js'></script>
     <script src='js/slider.js'></script>
+    <script src='js/svg-injector.js'></script>
+    <script src='js/modal.js'></script>
     <!-- /%link{:href => "https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,600,700", :rel => "stylesheet", :type => "text/css"}/ -->
   </head>
   <body class='intro' id='body'>
@@ -27,6 +29,7 @@
       </ul>
     </div>
     <!-- / Trabajar sobre esto, hacer que el menu mobile sea esto -->
+    <!-- / MENU -->
     <div class='section-menu'>
       <nav>
         <ul class='flex'>
@@ -54,63 +57,71 @@
         </ul>
       </nav>
     </div>
+    <!-- / MODALS -->
+    <div class='modal' id='project1-modal'>
+      <div class='container'>
+        <a class='close-button' data-trigger='#project1-modal' href='#'></a>
+      </div>
+    </div>
+    <!-- / MAIN CONTENT -->
     <div class='main-wrapper'>
-      <!-- / Slider section -->
+      <!-- / SLIDER -->
       <section class='slider-box flex'>
-        <div class='intro' id='slider'>
-          <div class='next'></div>
-          <div class='prev'></div>
-          <div class='slide-content intro-slide'>
-            <img alt='' src='slider/intro.svg' />
-          </div>
-          <div class='slide-content ui-slide'>
-            <img alt='' src='slider/ui.svg' />
-          </div>
-          <div class='slide-content ux-slide'>
-            <img alt='' src='slider/ux.svg' />
-          </div>
-          <div class='slide-content illus-slide'>
-            <img alt='' src='slider/illus.svg' />
-          </div>
-          <div class='slide-content teach-slide'>
-            <img alt='' src='slider/teach.svg' />
-          </div>
-          <div class='slide-content front-slide'>
-            <img alt='' src='slider/front.svg' />
-          </div>
-          <div class='slide-content music-slide'>
-            <img alt='' src='slider/music.svg' />
-          </div>
-          <div class='slide-title'>
-            <h2 class='intro-slide'>
-              Hi! I’m a Designer
-            </h2>
-            <h2 class='ui-slide'>
-              I live through UI Design
-            </h2>
-            <h2 class='ux-slide'>
-              I think through UX Design
-            </h2>
-            <h2 class='illus-slide'>
-              I have fun illustrating
-            </h2>
-            <h2 class='teach-slide'>
-              I learn by teaching
-            </h2>
-            <h2 class='front-slide'>
-              I enjoy coding!
-            </h2>
-            <h2 class='music-slide'>
-              I have the beat in my blood
-            </h2>
-            <a href='#main'>
-              © All rights reserved
-            </a>
-          </div>
-        </div>
-      </section>
+  <div class='intro' id='slider'>
+    <div class='next'></div>
+    <div class='prev'></div>
+    <div class='slide-content intro-slide'>
+      <img alt='' class='inject-me' src='slider/intro.svg' />
+    </div>
+    <div class='slide-content ui-slide'>
+      <img alt='' class='inject-me' src='slider/ui.svg' />
+    </div>
+    <div class='slide-content ux-slide'>
+      <img alt='' class='inject-me' src='slider/ux.svg' />
+    </div>
+    <div class='slide-content illus-slide'>
+      <img alt='' class='inject-me' src='slider/illus.svg' />
+    </div>
+    <div class='slide-content teach-slide'>
+      <img alt='' class='inject-me' src='slider/teach.svg' />
+    </div>
+    <div class='slide-content front-slide'>
+      <img alt='' class='inject-me' src='slider/front.svg' />
+    </div>
+    <div class='slide-content music-slide'>
+      <img alt='' class='inject-me' src='slider/music.svg' />
+    </div>
+    <div class='slide-title'>
+      <h2 class='intro-slide'>
+        Hi! I’m a Designer
+      </h2>
+      <h2 class='ui-slide'>
+        I live through UI Design
+      </h2>
+      <h2 class='ux-slide'>
+        I think through UX Design
+      </h2>
+      <h2 class='illus-slide'>
+        I have fun illustrating
+      </h2>
+      <h2 class='teach-slide'>
+        I learn by teaching
+      </h2>
+      <h2 class='front-slide'>
+        I enjoy coding!
+      </h2>
+      <h2 class='music-slide'>
+        I have the beat in my blood
+      </h2>
+      <a href='#main'>
+        © All rights reserved
+      </a>
+    </div>
+  </div>
+</section>
       <section class='content-portfolio'>
         <section class='flex'>
+          <!-- / PORTFOLIO -->
           <div class='section-expand container section-portfolio' id='portfolio-expand'>
             <a class='close-button' data-trigger='#portfolio-expand' href='#'></a>
             <h2>
@@ -122,7 +133,7 @@
             </div>
             <div class='container'>
               <div class='row flex'>
-                <a class='project' href='#'>
+                <a class='project modal-trigger' data-trigger='#project1-modal' href='#project1-modal'>
                   <div class='shot'>
                     <img alt='' src='img/face.png' />
                   </div>
@@ -200,130 +211,130 @@
           </section>
           <!-- / Text content -->
           <section class='text-content'>
-            <!-- / My curriculum -->
-            <div class='section-expand container section-cv' id='cv-expand'>
-              <a class='close-button' data-trigger='#cv-expand' href='#'></a>
-              <div class='image'>
-                <img alt='' src='img/face.png' />
-              </div>
-              <h2>
-                Do you want to
-                <br />
-                see more?
-              </h2>
-              <p>Oh that's flattering!</p>
-              <button>
-                <i class='fa fa-cloud-download'></i>
-                Download CV
-              </button>
-            </div>
-            <!-- / Contact page -->
-            <div class='section-expand container section-contact' id='contact-expand'>
-              <a class='close-button' data-trigger='#contact-expand' href='#'></a>
-              <div class='image'>
-                <img alt='' src='img/face.png' />
-              </div>
-              <h2>
-                Send me a message
-              </h2>
-              <p>joaquin.lluis@gmail.com</p>
-              <button>
-                <i class='fa fa-cloud-download'></i>
-                Send
-              </button>
-            </div>
-            <div class='container section-content intro-content'>
-              <div class='text'>
-                <h2>
-                  Hi! I’m Joaquín Lluis a Designer
-                  <sup>(01)</sup>
-                </h2>
-                <p>
-                  Im Joaquín a young digital designer from buenos aires Argentina. Currently Im working as a UI/UX designer at Restorando, the biggest dinning experience oriented website in Latin América.
-                  <br />
-                  Since 2013 i work as a teacher for the Typography essay at university of buenos aires. I invite you to take a look at all the things that i love to do, that inspires me to work hard and enjoy my life everyday.
-                </p>
-              </div>
-            </div>
-            <div class='container section-content ui-content'>
-              <div class='text'>
-                <h2>
-                  UI Design's been my life for a long time
-                  <sup>(02)</sup>
-                </h2>
-                <p>
-                  Since 4 years ago web design, and particularly digital user interactions, have transformed in one of my key points in my profesional life.
-                  <br />
-                  The digital world and the interaction experience with interfaces are not only enough nerdy to be my interests but also I always believe that, the future is gonna be digital!
-                </p>
-              </div>
-            </div>
-            <div class='container section-content ux-content'>
-              <div class='text'>
-                <h2>
-                  UX Design it's a way of seeing the world from a different point of view
-                  <sup>(03)</sup>
-                </h2>
-                <p>
-                  The incorporation of UX concepts in my profesional life its been one of the biggest milestones in my career. As a designer, its easy to think that your decisions are the result of a great analysis that you make because you think differently and creatively, but that doesn’t mean that you are doing a good job for users. Its interesting how we manage a way out of the possibility of having feedback within the process, because we assume that we are capable of figuring things out by our&nbsp;own.
-                  <br />
-                  By becoming more UX driven, I started to feel that I was finally understanding what it really means to design, not an experience for myself but for the user that’s gonna be the ones using your product.
-                </p>
-              </div>
-            </div>
-            <div class='container section-content illus-content'>
-              <div class='text'>
-                <h2>
-                  Illustration is a way to express a thought in another language
-                  <sup>(04)</sup>
-                </h2>
-                <p>
-                  Since I’m a child I draw, its a kind of hobbit for myself that transformed in a skill in my profesional life. I’m not an illustrator, I’m a Graphic Designer that has the ability to make some kind of cute illustrations. This difference its really important for me, an illustrator can handle many more graphical universes that I can possibly handle.
-                  <br />
-                  In a way its an ability that I don’t wanna ever stop feeding and I’m constantly forcing myself to keep estimulating, but not as a traditional illustrator, I like to mix things up with other skills that I have, like frontend coding and animation. That’s why I do a lot of illustrations mixed with UI, so that I can use together all of my skills and passions.
-                </p>
-              </div>
-            </div>
-            <div class='container section-content teach-content'>
-              <div class='text'>
-                <h2>
-                  Teaching is a way of experiencing everything you think you've learned
-                  <sup>(05)</sup>
-                </h2>
-                <p>
-                  In 2013 I started to teach in the cátedra Cosgaya in the essay typography in the University of Buenos Aires. Since the beginning It is one of  the biggest, yet more valuable, challenge I have in my career as a designer. Explain what you think you have learn and ask yourself about every decision you made when designing anything.
-                  <br />
-                  Not so much designers have the possibility of exploring that difficulty of entering in the metadesign. Ask yourself questions about your process to help another person achieve his best potencial, Is not only graceful but also a great way of learning more about design and yourself.
-                </p>
-              </div>
-            </div>
-            <div class='container section-content front-content'>
-              <div class='text'>
-                <h2>
-                  From the frontend that I do, to the backend (that I wish to do someday), I love the code
-                  <sup>(06)</sup>
-                </h2>
-                <p>
-                  First of all I'm not a real frontender. Everyday I learn new stuff about frontend I feel awful about myself. But also theres no day that I dont wanna do frontend o learn soñé thing new about it, not only for the challenge of making my design real, but for the pleasure of ensuring that is the best of my initial&nbsp;design.
-                  <br />
-                  Surrounded by developers, I love the challenge of learning from them, since the Logic of ruby on rails to the principles of mysql. Its not about learning to do what they do but understanding how it works, that i think that makes me a better designer everyday. I think that if a designer doesnt care about the basic principles of the implementation process, the design suffers of the lack of the knowledge, and that is one of the basic principles of the design process, the&nbsp;research.
-                </p>
-              </div>
-            </div>
-            <div class='container section-content music-content'>
-              <div class='text'>
-                <h2>
-                  Drums and music for me, are a way to escape of the constant all day thoughts
-                  <sup>(07)</sup>
-                </h2>
-                <p>
-                  Im i a musician? I really think Im not, but for me the music is a way to put away my mind from everyday thoughts, kind of a theraphy to stay sharp.
-                  <br />
-                  Play drums is a challenge of coordination, councience, consistency, learn to listen, learn to be company and find the balance between the silence and the accent that makes the rhythm in every song.
-                </p>
-              </div>
-            </div>
-          </section>
+  <!-- / My curriculum -->
+  <div class='section-expand container section-cv' id='cv-expand'>
+    <a class='close-button' data-trigger='#cv-expand' href='#'></a>
+    <div class='image'>
+      <img alt='' src='img/face.png' />
+    </div>
+    <h2>
+      Do you want to
+      <br />
+      see more?
+    </h2>
+    <p>Oh that's flattering!</p>
+    <button>
+      <i class='fa fa-cloud-download'></i>
+      Download CV
+    </button>
+  </div>
+  <!-- / Contact page -->
+  <div class='section-expand container section-contact' id='contact-expand'>
+    <a class='close-button' data-trigger='#contact-expand' href='#'></a>
+    <div class='image'>
+      <img alt='' src='img/face.png' />
+    </div>
+    <h2>
+      Send me a message
+    </h2>
+    <p>joaquin.lluis@gmail.com</p>
+    <button>
+      <i class='fa fa-cloud-download'></i>
+      Send
+    </button>
+  </div>
+  <div class='container section-content intro-content'>
+    <div class='text'>
+      <h2>
+        Hi! I’m Joaquín Lluis a Designer
+        <sup>(01)</sup>
+      </h2>
+      <p>
+        Im Joaquín a young digital designer from buenos aires Argentina. Currently Im working as a UI/UX designer at Restorando, the biggest dinning experience oriented website in Latin América.
+        <br />
+        Since 2013 i work as a teacher for the Typography essay at university of buenos aires. I invite you to take a look at all the things that i love to do, that inspires me to work hard and enjoy my life everyday.
+      </p>
+    </div>
+  </div>
+  <div class='container section-content ui-content'>
+    <div class='text'>
+      <h2>
+        UI Design's been my life for a long time
+        <sup>(02)</sup>
+      </h2>
+      <p>
+        Since 4 years ago web design, and particularly digital user interactions, have transformed in one of my key points in my profesional life.
+        <br />
+        The digital world and the interaction experience with interfaces are not only enough nerdy to be my interests but also I always believe that, the future is gonna be digital!
+      </p>
+    </div>
+  </div>
+  <div class='container section-content ux-content'>
+    <div class='text'>
+      <h2>
+        UX Design it's a way of seeing the world from a different point of view
+        <sup>(03)</sup>
+      </h2>
+      <p>
+        The incorporation of UX concepts in my profesional life its been one of the biggest milestones in my career. As a designer, its easy to think that your decisions are the result of a great analysis that you make because you think differently and creatively, but that doesn’t mean that you are doing a good job for users. Its interesting how we manage a way out of the possibility of having feedback within the process, because we assume that we are capable of figuring things out by our&nbsp;own.
+        <br />
+        By becoming more UX driven, I started to feel that I was finally understanding what it really means to design, not an experience for myself but for the user that’s gonna be the ones using your product.
+      </p>
+    </div>
+  </div>
+  <div class='container section-content illus-content'>
+    <div class='text'>
+      <h2>
+        Illustration is a way to express a thought in another language
+        <sup>(04)</sup>
+      </h2>
+      <p>
+        Since I’m a child I draw, its a kind of hobbit for myself that transformed in a skill in my profesional life. I’m not an illustrator, I’m a Graphic Designer that has the ability to make some kind of cute illustrations. This difference its really important for me, an illustrator can handle many more graphical universes that I can possibly handle.
+        <br />
+        In a way its an ability that I don’t wanna ever stop feeding and I’m constantly forcing myself to keep estimulating, but not as a traditional illustrator, I like to mix things up with other skills that I have, like frontend coding and animation. That’s why I do a lot of illustrations mixed with UI, so that I can use together all of my skills and passions.
+      </p>
+    </div>
+  </div>
+  <div class='container section-content teach-content'>
+    <div class='text'>
+      <h2>
+        Teaching is a way of experiencing everything you think you've learned
+        <sup>(05)</sup>
+      </h2>
+      <p>
+        In 2013 I started to teach in the cátedra Cosgaya in the essay typography in the University of Buenos Aires. Since the beginning It is one of  the biggest, yet more valuable, challenge I have in my career as a designer. Explain what you think you have learn and ask yourself about every decision you made when designing anything.
+        <br />
+        Not so much designers have the possibility of exploring that difficulty of entering in the metadesign. Ask yourself questions about your process to help another person achieve his best potencial, Is not only graceful but also a great way of learning more about design and yourself.
+      </p>
+    </div>
+  </div>
+  <div class='container section-content front-content'>
+    <div class='text'>
+      <h2>
+        From the frontend that I do, to the backend (that I wish to do someday), I love the code
+        <sup>(06)</sup>
+      </h2>
+      <p>
+        First of all I'm not a real frontender. Everyday I learn new stuff about frontend I feel awful about myself. But also theres no day that I dont wanna do frontend o learn soñé thing new about it, not only for the challenge of making my design real, but for the pleasure of ensuring that is the best of my initial&nbsp;design.
+        <br />
+        Surrounded by developers, I love the challenge of learning from them, since the Logic of ruby on rails to the principles of mysql. Its not about learning to do what they do but understanding how it works, that i think that makes me a better designer everyday. I think that if a designer doesnt care about the basic principles of the implementation process, the design suffers of the lack of the knowledge, and that is one of the basic principles of the design process, the&nbsp;research.
+      </p>
+    </div>
+  </div>
+  <div class='container section-content music-content'>
+    <div class='text'>
+      <h2>
+        Drums and music for me, are a way to escape of the constant all day thoughts
+        <sup>(07)</sup>
+      </h2>
+      <p>
+        Im i a musician? I really think Im not, but for me the music is a way to put away my mind from everyday thoughts, kind of a theraphy to stay sharp.
+        <br />
+        Play drums is a challenge of coordination, councience, consistency, learn to listen, learn to be company and find the balance between the silence and the accent that makes the rhythm in every song.
+      </p>
+    </div>
+  </div>
+</section>
         </section>
         <a class='section-trigger' data-trigger='#portfolio-expand' href='#portfolio-expand'>
           <section class='portfolio'>
@@ -338,20 +349,10 @@
         </a>
       </section>
       <script>
-        $(function() {
-        $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-        $('html, body').animate({
-        scrollTop: target.offset().top
-        }, 1000);
-        return false;
-        }
-        }
-        });
-        });
+        <!-- / Elements to inject -->
+        var mySVGsToInject = document.querySelectorAll('img.inject-me');
+        <!-- / Do the injection -->
+        SVGInjector(mySVGsToInject);
       </script>
     </div>
   </body>
