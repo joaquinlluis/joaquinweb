@@ -29,16 +29,5 @@ $(document).ready(function(){
     $('.section-menu li:eq(' + step + ')').addClass('active');
   }
 
-  $('.section-trigger').click(function(){
-    sectionId = $(this).data('trigger');
-    $('.section-trigger').removeClass('active');
-    $(this).addClass('active');
-    $('.section-expand').removeClass('active');
-    $(sectionId).toggleClass('active');
-  });
-  $('.close-button').click(function(){
-    sectionCloseId = $(this).data('trigger');
-    $(sectionCloseId).toggleClass('active');
-  });
 
 });
