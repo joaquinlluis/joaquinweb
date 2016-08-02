@@ -3,7 +3,6 @@
   %head
     %title Joaquín Lluis - Website
     %link{:href => "style.css", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "font-awesome/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}/
     %meta{ :http_equiv => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
     %meta{ :name => "viewport", :content => "width=device-width,initial-scale=1" }
     %meta{ :charset => "UTF-8" }
@@ -11,22 +10,23 @@
     %script{:src => "js/slider.js"}
     %script{:src => "js/svg-injector.js"}
     %script{:src => "js/modal.js"}
-    //%link{:href => "https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,600,700", :rel => "stylesheet", :type => "text/css"}/
+    //%link{:href => "https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,300", :rel => "stylesheet", :type => "text/css"}/
 
   %body#body.intro
-    .menu-mobile
-      %ul.flex
-        %li
-          %a{:href => "#"}
-            Skills
-        %li
-          %a{:href => "#"}
-            Menu
+    %header
+      .logo
+        %img{:src => "img/logo.svg", :alt => "Imagen del logo"}/
+      .menu-trigger
 
-    // Trabajar sobre esto, hacer que el menu mobile sea esto
+      %nav.language
+        %ul
+          %li
+            %a{:href => "#", :rel => "alternate"} EN
+          %li
+            %a{:href => "#", :rel => "alternate"} ES
+
     // MENU
     .section-menu
-      %h1 logo
       %nav
         %ul.flex
           %li.active
@@ -45,7 +45,7 @@
             %a{:href => "#"} Music
 
 
-    .modal#project1-modal.active
+    .modal#project1-modal
       .container
         %a.close-button{"data-trigger" => "#project1-modal", :href => "#"}
         %h2 Project name
@@ -79,28 +79,13 @@
               %ul
                 %li
                   %a.section-trigger{"data-trigger" => "#cv-expand", :href => "#cv-expand"}
-                    %i.fa.fa-chevron-circle-right.fa-pull-right
                     Curriculum
                 %li
                   %a.section-trigger{"data-trigger" => "#contact-expand", :href => "#contact-expand"}
-                    %i.fa.fa-chevron-circle-right.fa-pull-right
                     Contact me
                 %li
                   %a{:href => "https://medium.com/@joaquin.lluis"}
-                    %i.fa.fa-link.fa-pull-right
                     Medium
-            .social-net
-              .container.flex
-                %ul
-                  %li
-                    %a{:href => "https://github.com/joaquinlluis22"}
-                      %i.fa.fa-github
-                  %li
-                    %a{:href => "https://dribbble.com/joaquinlluis"}
-                      %i.fa.fa-dribbble
-                  %li
-                    %a{:href => "https://www.instagram.com/joaquinlluis/"}
-                      %i.fa.fa-instagram
 
           // Text content
           = partial 'text-content'
@@ -109,7 +94,6 @@
           %section.portfolio
             .container
               .eye
-                %i.fa.fa-eye
               %p See my
               %h2 Portfolio
 
