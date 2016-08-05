@@ -1,6 +1,8 @@
 // SLIDER
 
 .slider-box
+  z-index: 2
+  box-shadow: -10px 0px 0px 0px rgba(0, 0, 0, 0.04)
   min-height: 100vh
   order: 2
   +tablet
@@ -26,49 +28,52 @@
 
   .slide-content
     display: none
-    max-width: 600px
     width: 100%
+    max-width: 530px
+    margin: auto
+    padding: 30px 40px
     z-index: 1
   .slide-title
-    position: absolute
+    position: relative
     width: 100%
-    left: 0
-    bottom: 10%
     text-align: center
+    padding: 30px 0 50px 0
     h2
       display: none
+      font-size: 30px
       color: #fff
-      font-size: 25px
-      margin-bottom: 5px
-    a
-      color: #fff
-      opacity: 0.6
-      position: relative
-      &:after, &:before
-        content: ''
-        width: 8px
-        height: 8px
-        top: 16px
-        left: 50%
-        position: absolute
-        transform: rotate(-45deg) translateX(-50%)
-        border-bottom: 2px solid #fff
-        border-left: 2px solid #fff
-      &:before
-        top: 22px
-        border-bottom: 2px solid rgba(255, 255, 255, 0.5)
-        border-left: 2px solid rgba(255, 255, 255, 0.5)
+      span
+        display: block
+        position: relative
+        opacity: 0.6
+        font-size: 16px
+        font-weight: 400
+        color: #fff
+      // &:after, &:before
+      //   content: ''
+      //   width: 8px
+      //   height: 8px
+      //   top: 16px
+      //   left: 50%
+      //   position: absolute
+      //   transform: rotate(-45deg) translateX(-50%)
+      //   border-bottom: 2px solid #fff
+      //   border-left: 2px solid #fff
+      // &:before
+      //   top: 22px
+      //   border-bottom: 2px solid rgba(255, 255, 255, 0.5)
+      //   border-left: 2px solid rgba(255, 255, 255, 0.5)
 
 .next,
 .prev
   position: absolute
   width: 50px
   height: 50px
-  top: 50%
-  transform: translateY(-50%)
+  background: rgba(0,0,0,0.1)
   cursor: pointer
   border-radius: 50%
   transition: all 0.5s ease
+  z-index: 1
   &:before
     content: ''
     width: 8px
@@ -77,18 +82,18 @@
     left: 40%
     position: absolute
     transform: rotate(45deg)
-    border-bottom: 3px solid rgba(255, 255, 255, 0.8)
-    border-left: 3px solid rgba(255, 255, 255, 0.8)
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8)
+    border-left: 2px solid rgba(255, 255, 255, 0.8)
   &:hover
     background: rgba(0,0,0,0.2)
     &:before
-      border-bottom: 3px solid rgba(255, 255, 255, 1)
-      border-left: 3px solid rgba(255, 255, 255, 1)
+      border-bottom: 2px solid rgba(255, 255, 255, 1)
+      border-left: 2px solid rgba(255, 255, 255, 1)
 
 .prev
-  left: 30px
+  left: 40px
 .next
-  right: 30px
+  right: 40px
   &:before
     left: 33%
     transform: rotate(225deg)

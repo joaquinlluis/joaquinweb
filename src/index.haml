@@ -67,36 +67,23 @@
       = partial 'slider'
 
 
-      %section.content-portfolio
-        %section.flex
+      %section.papers
 
-          = partial 'portfolio'
-
-
-          // Nav
-          %section.navigation-content
-            %nav
-              %ul
-                %li
-                  %a.section-trigger{"data-trigger" => "#cv-expand", :href => "#cv-expand"}
-                    Curriculum
-                %li
-                  %a.section-trigger{"data-trigger" => "#contact-expand", :href => "#contact-expand"}
-                    Contact me
-                %li
-                  %a{:href => "https://medium.com/@joaquin.lluis"}
-                    Medium
-
-          // Text content
-          = partial 'text-content'
+        = partial 'text-content'
 
         %a.section-trigger{"data-trigger" => "#portfolio-expand", :href => "#portfolio-expand"}
-          %section.portfolio
+          %section.swap-paper.portfolio
             .container
-              .eye
+              .icon
               %p See my
               %h2 Portfolio
 
+        %a.section-trigger{"data-trigger" => "#portfolio-expand", :href => "#portfolio-expand"}
+          %section.swap-paper.contact
+            .container
+              .icon
+              %p Here you can
+              %h2 Contact me
 
 
       %script
