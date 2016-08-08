@@ -19,4 +19,9 @@ $(document).ready(function(){
     $(sectionId).toggleClass('active');
   });
 
+  $('.menu-trigger').click(function(){
+    $('.navigation-content').toggleClass('active');
+    $('.menu-trigger').toggleClass('active');
+  });
+
 });

@@ -23,42 +23,6 @@
     +desktop
       flex-direction: row
 
-// Navigation-content
-.navigation-content
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  background: #ccc
-  flex: 1!important
-  order: 1
-  transition: all 0.5s ease
-  +desktop
-    +animation(appearfromleft 0.6s)
-    +animation-attr
-    transform-origin: center
-  +tablet
-    order: 0
-  +desktop
-    order: 0
-  nav
-    padding: 30px 30px 0 30px
-  nav ul li
-    border-bottom: 2px solid #fff
-    &:first-child
-      border-top: 2px solid #fff
-    a
-      display: block
-      color: rgba(255,255,255,0.8)
-      padding: 10px 5px
-      transition: all 0.5s ease
-      &.active, &:hover
-        color: white
-        padding-left: 13px
-      &:hover i
-        color: rgba(255,255,255,0.8)
-      i
-        padding-top: 3px
-
 
 //SECTION EXPAND
 .close-button
@@ -210,6 +174,8 @@
   h2, p
     text-align: left
     color: #fff
+  p
+    margin-bottom: -4px
   .icon
     float: left
     margin-right: 10px
@@ -219,7 +185,10 @@
     background: rgba(255,255,255,0.2)
     border-radius: 50%
     text-align: center
-
+    img
+      margin-top: -6px
+      width: 30px
+      height: 38px
 
 // PROJECT
 
@@ -270,7 +239,8 @@
 
 .text
   flex: 2
-  padding: 0 20px
+  padding: 0 30px 0 20px
+
   h2
     color: #666
     font-size: 50px
@@ -284,6 +254,23 @@
     margin-bottom: 35px
     line-height: 130%
 
+  span
+    display: block
+    margin-bottom: 25px
+    padding-left: 20px
+    font-size: 14px
+    letter-spacing: 1px
+    color: #999999
+    position: relative
+    &:after
+      position: absolute
+      left: 0
+      top: 7px
+      content: ''
+      width: 8px
+      height: 8px
+      opacity: 0.8
+      border-radius: 50%
 
 
 // ELEMENTS

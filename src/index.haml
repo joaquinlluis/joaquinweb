@@ -13,10 +13,47 @@
     //%link{:href => "https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,300", :rel => "stylesheet", :type => "text/css"}/
 
   %body#body.intro
+
+    %section.navigation-content
+      %nav
+        %ul
+          %li
+            %a.section-trigger{"data-trigger" => "#cv-expand", :href => "#cv-expand"}
+              CURRICULUM
+              %img{:src => "img/open-arrow.svg", :alt => "open section curriculumn", :width => "19", :height => "14"}/
+          %li
+            %a.section-trigger{"data-trigger" => "#contact-expand", :href => "#contact-expand"}
+              DRIBBBLE
+              %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
+          %li
+            %a{:href => "https://behance.com/joaquinlluis"}
+              BEHANCE
+              %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
+          %li
+            %a{:href => "https://medium.com/@joaquin.lluis"}
+              MEDIUM
+              %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
+          %li
+            %a{:href => "https://github.com/joaquinlluis22"}
+              GITHUB
+              %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
+          %li
+            %a{:href => "https://instagram.com/joaquinlluis"}
+              INSTAGRAM
+              %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
+      %span
+        © All rights reserved.
+        %br/
+        Coded with love by me!
+
+    .menu-trigger
+      %span
+      %span
+      %span
+
     %header
       .logo
         %img{:src => "img/logo.svg", :alt => "Imagen del logo"}/
-      .menu-trigger
 
       %nav.language
         %ul
@@ -75,6 +112,7 @@
           %section.swap-paper.portfolio
             .container
               .icon
+                %img{:src => "img/portfolio-icon.svg", :alt => ""}/
               %p See my
               %h2 Portfolio
 
@@ -82,6 +120,7 @@
           %section.swap-paper.contact
             .container
               .icon
+                %img{:src => "img/contact-icon.svg", :alt => ""}/
               %p Here you can
               %h2 Contact me
 

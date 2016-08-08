@@ -1,7 +1,7 @@
 
 //UI MIXIN
 =ui-colors($ui-color)
-  #slider, button, footer, header
+  #slider, button, footer, header, .navigation-content, .text span:after
     background: $ui-color
   .text h2, .section-cv h2
     color: $ui-color
@@ -13,7 +13,7 @@
     background: darken($ui-color, 6%)
   .section-portfolio .close-button
     background: darken($ui-color, 10%)
-  .navigation-content, .contact
+  .contact
     background: lighten($ui-color, 3%)
   .close-button:after
     border-bottom: 2px solid $ui-color
@@ -22,15 +22,8 @@
     background: lighten($ui-color, 20%)
     &:hover
       background: lighten($ui-color, 10%)
-  .navigation-content nav ul li
-    border-bottom: 2px solid darken($ui-color, 1%)
-    &:first-child
-      border-top: 2px solid darken($ui-color, 1%)
-    i
-      color: darken($ui-color, 2%)
-  .eye i
-    color: darken($ui-color, 4%)
-
+    &:last-child
+      border-bottom: none
 //MEDIA QUERIE MIXIN
 $tablet-width: 768px
 $desktop-width: 1024px
