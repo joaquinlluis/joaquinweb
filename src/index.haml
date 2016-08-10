@@ -67,21 +67,28 @@
       %nav
         %ul.flex
           %li.active
+            .icon
             %a{:href => "#"} Intro
           %li
+            .icon
             %a{:href => "#"} UI Design
           %li
+            .icon
             %a{:href => "#"} UX Design
           %li
+            .icon
             %a{:href => "#"} Illustration
           %li
+            .icon
             %a{:href => "#"} Teaching
           %li
+            .icon
             %a{:href => "#"} Frontend
           %li
+            .icon
             %a{:href => "#"} Music
 
-
+    // MODALS
     .modal.curriculum#curriculum
       .container
         %a.close-button{"data-trigger" => "#curriculum", :href => "#"}
@@ -89,10 +96,14 @@
           Do you want to
           %br/
           see more?
-        %p
-          Oh! Thanks! Thats flattering, Here you can download my curriculum
-        %button
-          DOWNLOAD CV
+        .flex
+          .tags
+            %img{:src => "img/face.png", :alt => ""}/
+          .description
+            %p
+              Oh! Thanks! Thats flattering, Here you can download my curriculum
+            %button
+              DOWNLOAD CV
 
     .modal#project1-modal
       .container
@@ -109,6 +120,7 @@
             %p Tags
             .tag Branding
             .tag App
+        %br/
 
         %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
         %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
@@ -131,21 +143,22 @@
 
         = partial 'text-content'
 
-        %a.section-trigger{"data-trigger" => "#portfolio-expand", :href => "#portfolio-expand"}
-          %section.swap-paper.portfolio
-            .container
-              .icon
-                %img{:src => "img/portfolio-icon.svg", :alt => ""}/
-              %p See my
-              %h2 Portfolio
+        %section.swap-paper.portfolio#portfolio
+          %a.close-button{"data-trigger" => "#portfolio", :href => "#"}
+          .container
+            .icon
+              %img{:src => "img/portfolio-icon.svg", :alt => ""}/
+            %p See my
+            %h2 Portfolio
+            = partial 'portfolio'
 
-        %a.section-trigger{"data-trigger" => "#portfolio-expand", :href => "#portfolio-expand"}
-          %section.swap-paper.contact
-            .container
-              .icon
-                %img{:src => "img/contact-icon.svg", :alt => ""}/
-              %p Here you can
-              %h2 Contact me
+        %section.swap-paper.contact#contact
+          %a.close-button{"data-trigger" => "#contact", :href => "#"}
+          .container
+            .icon
+              %img{:src => "img/contact-icon.svg", :alt => ""}/
+            %p Here you can
+            %h2 Contact me
 
 
       %script

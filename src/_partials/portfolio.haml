@@ -1,30 +1,29 @@
-.section-expand#portfolio-expand.container.section-portfolio
-  %a.close-button{"data-trigger" => "#portfolio-expand", :href => "#"}
-  %h2
-    Portfolio
-  %p A selection of my work
-  .container
-    %hr/
-  .container
-    .row.flex
-      %a.project.modal-trigger{"data-trigger" => "#project1-modal", :href => "#project1-modal"}
-        .shot
-          %img{:src => "img/face.png", :alt => ""}/
-        .title
-          %h4 Lorem ipsum dolore
-      %a.project.modal-trigger{"data-trigger" => "#project2-modal", :href => "#project2-modal"}
-        .shot
-          %img{:src => "img/face.png", :alt => ""}/
-        .title
-          %h4 Lorem ipsum dolore
-      %a.project.modal-trigger{"data-trigger" => "#project3-modal", :href => "#project3-modal"}
-        .shot
-          %img{:src => "img/face.png", :alt => ""}/
-        .title
-          %h4 Lorem ipsum dolore
-
-  .container.flex
-    %hr/
+.portfolio-content
+  %hr/
+  .flex.row
+    %a.project.modal-trigger{"data-trigger" => "#project1-modal", :href => "#project1-modal"}
+      .shot
+        %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
+      .title
+        %h4
+          Andén
+        %p iOS / Android App
+    %a.project.modal-trigger{"data-trigger" => "#project2-modal", :href => "#project2-modal"}
+      .shot
+        %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
+      .title
+        %h4
+          Wherevent
+        %p Android app
+    %a.project.modal-trigger{"data-trigger" => "#project3-modal", :href => "#project3-modal"}
+      .shot
+        %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
+      .title
+        %h4
+          Petselfie
+        %p iOS app
+  %hr/
+  .center
     %button.dribbble
       %a{:href => "https://dribbble.com/joaquinlluis"}
         %i.fa.fa-dribbble

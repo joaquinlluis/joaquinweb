@@ -1,16 +1,7 @@
 $(document).ready(function(){
-
-  $('.section-trigger').click(function(){
-    sectionId = $(this).data('trigger');
-    $('.section-trigger').removeClass('active');
-    $(this).addClass('active');
-    $('.section-expand').removeClass('active');
-    $(sectionId).toggleClass('active');
-  });
   $('.close-button').click(function(){
-    sectionCloseId = $(this).data('trigger');
-    $(sectionCloseId).toggleClass('active');
-    $('.section-trigger').removeClass('active');
+    CloseId = $(this).data('trigger');
+    $(CloseId).removeClass('active');
   });
 
   $('.modal-trigger').click(function(){
@@ -22,6 +13,15 @@ $(document).ready(function(){
   $('.menu-trigger').click(function(){
     $('.navigation-content').toggleClass('active');
     $('.menu-trigger').toggleClass('active');
+  });
+
+  $('.swap-paper').click(function(){
+    swapactive = $('.swap-paper').hasClass('active');
+    if(swapactive) {
+      null
+    } else {
+      $(this).addClass('active');
+    }
   });
 
 });
