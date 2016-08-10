@@ -18,7 +18,7 @@
       %nav
         %ul
           %li
-            %a.section-trigger{"data-trigger" => "#cv-expand", :href => "#cv-expand"}
+            %a.modal-trigger{"data-trigger" => "#curriculum", :href => "#curriculum"}
               CURRICULUM
               %img{:src => "img/open-arrow.svg", :alt => "open section curriculumn", :width => "19", :height => "14"}/
           %li
@@ -82,11 +82,34 @@
             %a{:href => "#"} Music
 
 
+    .modal.curriculum#curriculum
+      .container
+        %a.close-button{"data-trigger" => "#curriculum", :href => "#"}
+        %h2
+          Do you want to
+          %br/
+          see more?
+        %p
+          Oh! Thanks! Thats flattering, Here you can download my curriculum
+        %button
+          DOWNLOAD CV
+
     .modal#project1-modal
       .container
         %a.close-button{"data-trigger" => "#project1-modal", :href => "#"}
-        %h2 Project name
-        %p Lorem ipsum
+        %h2
+          Here is the title for the
+          %br/
+          Project #1
+        .flex
+          .description
+            %img{:src => "img/description_icon.svg", :alt => ""}/
+            We have been busy making some updates to the PhotoKeeper desktop designs! This is part of the "save new album" flow where the user can name the album and select what photos to include.
+          .tags
+            %p Tags
+            .tag Branding
+            .tag App
+
         %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
         %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
         %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/

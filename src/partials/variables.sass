@@ -1,9 +1,11 @@
 
 //UI MIXIN
 =ui-colors($ui-color)
-  #slider, button, footer, header, .navigation-content, .text span:after
+  #slider, button, footer, header, .navigation-content, .text span:after, .tag
     background: $ui-color
-  .text h2, .section-cv h2
+  .tag:after
+    border-color: transparent transparent transparent $ui-color
+  .text h2, .section-cv h2, .modal h2
     color: $ui-color
   .section-menu nav ul li.active
     background: darken($ui-color, 4%)
