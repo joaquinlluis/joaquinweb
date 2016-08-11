@@ -1,0 +1,29 @@
+.contact-content
+  %hr/
+  .flex.container
+    .image
+      %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
+    %form{:action => "post"}
+      %h4
+        Let’s get in contact!
+      %div
+        %label{:for => "email"}
+          Your email
+        %input#email{:type => "text", :name => "email", :placeholder => "Type your email here..."}/
+      %div
+        %label{:for => "subject"}
+          Select a subject
+        %select#subject{:name => "select"}
+          %option{:value => "Select here…"}
+          %option{:value => "Select"}
+          Select a subject
+      %div
+        %label{:for => "message"}
+          Message
+        %textarea#message{:name => "", :cols => "30", :rows => "8", :placehoder => "Type your message here..."}
+
+      %button{:type => "submit"}
+        SEND
+
+
+

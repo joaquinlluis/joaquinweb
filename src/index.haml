@@ -152,13 +152,14 @@
             %h2 Portfolio
             = partial 'portfolio'
 
-        %section.swap-paper.contact#contact
+        %section.swap-paper.contact#contact.active
           %a.close-button{"data-trigger" => "#contact", :href => "#"}
           .container
             .icon
               %img{:src => "img/contact-icon.svg", :alt => ""}/
             %p Here you can
             %h2 Contact me
+            = partial 'contact'
 
 
       %script
