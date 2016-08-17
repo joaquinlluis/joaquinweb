@@ -18,7 +18,7 @@ $(document).ready(function(){
   $('.swap-paper').click(function(){
     swapactive = $('.swap-paper').hasClass('active');
     if(swapactive) {
-      null
+      console.log('algo');
     } else {
       $(this).addClass('active');
     }

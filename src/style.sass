@@ -13,12 +13,16 @@
 
 .papers
   display: flex
+  min-height: 600px
   flex-direction: column
   position: relative
   overflow: hidden
   order: 2
+  margin-bottom: 60px
   +desktop
+    min-height: auto
     order: 1
+    margin-bottom: 0px
   .flex
     flex-direction: column
     +tablet
@@ -350,15 +354,19 @@
 
 // TEXT CONTENT
 .text-content
+  min-height: 400px
   height: 100%
   flex: 2!important
   padding: 0
   position: relative
   overflow: hidden
-  background: #eee
+  background: #fff
   z-index: 1
   &:before
     border-color: #F2F2F2 transparent transparent transparent!important
+  +desktop
+    min-height: auto
+    height: 100%
 
   .section-content
     overflow-x: hidden

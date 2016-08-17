@@ -15,8 +15,18 @@ header
     left: 50%
     top: 50%
     transform: translate(-50%, -50%)
-    width: 235px
+    width: 46px
     height: 22px
+    img:first-child
+      display: none
+    img:last-child
+      display: block
+    +desktop
+      width: 235px
+      img:last-child
+        display: none
+      img:first-child
+        display: block
 
   nav.language
     margin: auto 15px auto auto
