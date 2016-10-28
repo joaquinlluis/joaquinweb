@@ -3,7 +3,6 @@
   <head>
     <title>Joaquín Lluis - Website</title>
     <link href='style.css' rel='stylesheet' type='text/css' />
-    <link href='font-awesome/font-awesome.min.css' rel='stylesheet' type='text/css' />
     <meta content='IE=edge,chrome=1' http_equiv='X-UA-Compatible' />
     <meta content='width=device-width,initial-scale=1' name='viewport' />
     <meta charset='UTF-8' />
@@ -11,26 +10,83 @@
     <script src='js/slider.js'></script>
     <script src='js/svg-injector.js'></script>
     <script src='js/modal.js'></script>
-    <!-- /%link{:href => "https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,600,700", :rel => "stylesheet", :type => "text/css"}/ -->
+    <!-- /%link{:href => "https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,300", :rel => "stylesheet", :type => "text/css"}/ -->
   </head>
   <body class='intro' id='body'>
-    <div class='menu-mobile'>
-      <ul class='flex'>
-        <li>
-          <a href='#'>
-            Skills
-          </a>
-        </li>
-        <li>
-          <a href='#'>
-            Menu
-          </a>
-        </li>
-      </ul>
+    <section class='navigation-content'>
+      <nav>
+        <ul>
+          <li>
+            <a class='modal-trigger' data-trigger='#curriculum' href='#curriculum'>
+              CURRICULUM
+              <img alt='open section curriculumn' height='14' src='img/open-arrow.svg' width='19' />
+            </a>
+          </li>
+          <li>
+            <a class='section-trigger' data-trigger='#contact-expand' href='#contact-expand'>
+              DRIBBBLE
+              <img alt='external link' height='9' src='img/ext-link.svg' width='25' />
+            </a>
+          </li>
+          <li>
+            <a href='https://behance.com/joaquinlluis'>
+              BEHANCE
+              <img alt='external link' height='9' src='img/ext-link.svg' width='25' />
+            </a>
+          </li>
+          <li>
+            <a href='https://medium.com/@joaquin.lluis'>
+              MEDIUM
+              <img alt='external link' height='9' src='img/ext-link.svg' width='25' />
+            </a>
+          </li>
+          <li>
+            <a href='https://github.com/joaquinlluis22'>
+              GITHUB
+              <img alt='external link' height='9' src='img/ext-link.svg' width='25' />
+            </a>
+          </li>
+          <li>
+            <a href='https://instagram.com/joaquinlluis'>
+              INSTAGRAM
+              <img alt='external link' height='9' src='img/ext-link.svg' width='25' />
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <span>
+        © All rights reserved.
+        <br />
+        Coded with love by me!
+      </span>
+    </section>
+    <header class='loading1 loading2'>
+      <div class='loader'>
+        <div class='logo'>
+          <img alt='Imagen del logo' class='inject-me' src='img/logo.svg' />
+          <!-- %img{:src => "img/logo_mobile.svg", :alt => "Imagen del logo"}/ -->
+        </div>
+      </div>
+      <nav class='language'>
+        <ul>
+          <li>
+            <a href='#' rel='alternate'>EN</a>
+          </li>
+          <li>
+            <a href='#' rel='alternate'>ES</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class='menu-trigger'>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <!-- / Trabajar sobre esto, hacer que el menu mobile sea esto -->
     <!-- / MENU -->
     <div class='section-menu'>
+      <div class='next'></div>
+      <div class='prev'></div>
       <nav>
         <ul class='flex'>
           <li class='active'>
@@ -58,18 +114,68 @@
       </nav>
     </div>
     <!-- / MODALS -->
+    <div class='modal curriculum' id='curriculum'>
+      <div class='container'>
+        <a class='close-button' data-trigger='#curriculum' href='#'></a>
+        <h2>
+          Do you want to
+          <br />
+          see more?
+        </h2>
+        <div class='flex'>
+          <div class='tags'>
+            <img alt='' src='img/photo.svg' />
+          </div>
+          <div class='description'>
+            <p>
+              Oh! Thanks! Thats flattering, Here you can download my curriculum
+            </p>
+            <button>
+              DOWNLOAD CV
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class='modal' id='project1-modal'>
       <div class='container'>
         <a class='close-button' data-trigger='#project1-modal' href='#'></a>
+        <h2>
+          Here is the title for the
+          <br />
+          Project #1
+        </h2>
+        <div class='flex'>
+          <div class='description'>
+            <img alt='' src='img/description_icon.svg' />
+            We have been busy making some updates to the PhotoKeeper desktop designs! This is part of the "save new album" flow where the user can name the album and select what photos to include.
+          </div>
+          <div class='tags'>
+            <p>Tags</p>
+            <div class='tag'>Branding</div>
+            <div class='tag'>App</div>
+          </div>
+        </div>
+        <br />
+        <img alt='' src='img/portfolio/proyect1-img1.png' />
+        <img alt='' src='img/portfolio/proyect1-img1.png' />
+        <img alt='' src='img/portfolio/proyect1-img1.png' />
+      </div>
+    </div>
+    <div class='modal' id='project2-modal'>
+      <div class='container'>
+        <a class='close-button' data-trigger='#project2-modal' href='#'></a>
+      </div>
+    </div>
+    <div class='modal' id='project3-modal'>
+      <div class='container'>
+        <a class='close-button' data-trigger='#project3-modal' href='#'></a>
       </div>
     </div>
     <!-- / MAIN CONTENT -->
     <div class='main-wrapper'>
-      <!-- / SLIDER -->
       <section class='slider-box flex'>
   <div class='intro' id='slider'>
-    <div class='next'></div>
-    <div class='prev'></div>
     <div class='slide-content intro-slide'>
       <img alt='' class='inject-me' src='slider/intro.svg' />
     </div>
@@ -92,163 +198,72 @@
       <img alt='' class='inject-me' src='slider/music.svg' />
     </div>
     <div class='slide-title'>
+      <div class='next'></div>
+      <div class='prev'></div>
       <h2 class='intro-slide'>
         Hi! I’m a Designer
+        <span>
+          Since 2011
+        </span>
       </h2>
       <h2 class='ui-slide'>
         I live through UI Design
+        <span>
+          Since 2013
+        </span>
       </h2>
       <h2 class='ux-slide'>
         I think through UX Design
+        <span>
+          Since 2014
+        </span>
       </h2>
       <h2 class='illus-slide'>
         I have fun illustrating
+        <span>
+          Since ever
+        </span>
       </h2>
       <h2 class='teach-slide'>
         I learn by teaching
+        <span>
+          Since 2013
+        </span>
       </h2>
       <h2 class='front-slide'>
         I enjoy coding!
+        <span>
+          Since 2012
+        </span>
       </h2>
       <h2 class='music-slide'>
         I have the beat in my blood
+        <span>
+          Since 2007
+        </span>
       </h2>
-      <a href='#main'>
-        © All rights reserved
-      </a>
     </div>
   </div>
 </section>
-      <section class='content-portfolio'>
-        <section class='flex'>
-          <!-- / PORTFOLIO -->
-          <div class='section-expand container section-portfolio' id='portfolio-expand'>
-            <a class='close-button' data-trigger='#portfolio-expand' href='#'></a>
-            <h2>
-              Portfolio
-            </h2>
-            <p>A selection of my work</p>
-            <div class='container'>
-              <hr />
-            </div>
-            <div class='container'>
-              <div class='row flex'>
-                <a class='project modal-trigger' data-trigger='#project1-modal' href='#project1-modal'>
-                  <div class='shot'>
-                    <img alt='' src='img/face.png' />
-                  </div>
-                  <div class='title'>
-                    <h4>Lorem ipsum dolore</h4>
-                  </div>
-                </a>
-                <a class='project' href='#'>
-                  <div class='shot'>
-                    <img alt='' src='img/face.png' />
-                  </div>
-                  <div class='title'>
-                    <h4>Lorem ipsum dolore</h4>
-                  </div>
-                </a>
-                <a class='project' href='#'>
-                  <div class='shot'>
-                    <img alt='' src='img/face.png' />
-                  </div>
-                  <div class='title'>
-                    <h4>Lorem ipsum dolore</h4>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class='container flex'>
-              <hr />
-              <button class='dribbble'>
-                <a href='https://dribbble.com/joaquinlluis'>
-                  <i class='fa fa-dribbble'></i>
-                  View more on Dribbble
-                </a>
-              </button>
-            </div>
-          </div>
-          <!-- / Nav -->
-          <section class='navigation-content'>
-            <nav>
-              <ul>
-                <li>
-                  <a class='section-trigger' data-trigger='#cv-expand' href='#cv-expand'>Curriculum</a>
-                </li>
-                <li>
-                  <a class='section-trigger' data-trigger='#contact-expand' href='#contact-expand'>Contact me</a>
-                </li>
-                <li>
-                  <a href='https://medium.com/@joaquin.lluis'>
-                    <i class='fa fa-link'></i>
-                    Medium
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <div class='social-net'>
-              <div class='container flex'>
-                <ul>
-                  <li>
-                    <a href='https://github.com/joaquinlluis22'>
-                      <i class='fa fa-github'></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href='https://dribbble.com/joaquinlluis'>
-                      <i class='fa fa-dribbble'></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href='https://www.instagram.com/joaquinlluis/'>
-                      <i class='fa fa-instagram'></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <!-- / Text content -->
-          <section class='text-content'>
-  <!-- / My curriculum -->
-  <div class='section-expand container section-cv' id='cv-expand'>
-    <a class='close-button' data-trigger='#cv-expand' href='#'></a>
-    <div class='image'>
-      <img alt='' src='img/face.png' />
-    </div>
+      <section class='papers'>
+        <section class='swap-paper text-content' id='text-content'>
+          <a class='close-button' data-trigger='#text-content'></a>
+          <div class='container section-content intro-content'>
+  <div class='text'>
+    <span>
+      INTRO OF ME
+    </span>
     <h2>
-      Do you want to
+      Hi fowks! I’m
       <br />
-      see more?
+      Joaquín Lluis –
+      <br />
+      Digital Designer
     </h2>
-    <p>Oh that's flattering!</p>
-    <button>
-      <i class='fa fa-cloud-download'></i>
-      Download CV
-    </button>
-  </div>
-  <!-- / Contact page -->
-  <div class='section-expand container section-contact' id='contact-expand'>
-    <a class='close-button' data-trigger='#contact-expand' href='#'></a>
-    <div class='image'>
-      <img alt='' src='img/face.png' />
-    </div>
-    <h2>
-      Send me a message
-    </h2>
-    <p>joaquin.lluis@gmail.com</p>
-    <button>
-      <i class='fa fa-cloud-download'></i>
-      Send
-    </button>
-  </div>
-  <div class='container section-content intro-content'>
-    <div class='text'>
-      <h2>
-        Hi! I’m Joaquín Lluis a Designer
-        <sup>(01)</sup>
-      </h2>
+    <div class='content'>
+      <div class='image'>
+        <img alt='' src='img/photo.svg' />
+      </div>
       <p>
         Im Joaquín a young digital designer from buenos aires Argentina. Currently Im working as a UI/UX designer at Restorando, the biggest dinning experience oriented website in Latin América.
         <br />
@@ -256,12 +271,19 @@
       </p>
     </div>
   </div>
-  <div class='container section-content ui-content'>
-    <div class='text'>
-      <h2>
-        UI Design's been my life for a long time
-        <sup>(02)</sup>
-      </h2>
+</div>
+<div class='container section-content ui-content'>
+  <div class='text'>
+    <span>
+      UI LOVER
+    </span>
+    <h2>
+      UI Design's been my life for a long time
+    </h2>
+    <div class='content'>
+      <div class='image'>
+        <img alt='' src='img/photo.svg' />
+      </div>
       <p>
         Since 4 years ago web design, and particularly digital user interactions, have transformed in one of my key points in my profesional life.
         <br />
@@ -269,12 +291,19 @@
       </p>
     </div>
   </div>
-  <div class='container section-content ux-content'>
-    <div class='text'>
-      <h2>
-        UX Design it's a way of seeing the world from a different point of view
-        <sup>(03)</sup>
-      </h2>
+</div>
+<div class='container section-content ux-content'>
+  <div class='text'>
+    <span>
+      TOOLS YOU MUST HAVE
+    </span>
+    <h2>
+      Seeing the world – from another point of view
+    </h2>
+    <div class='content'>
+      <div class='image'>
+        <img alt='' src='img/photo.svg' />
+      </div>
       <p>
         The incorporation of UX concepts in my profesional life its been one of the biggest milestones in my career. As a designer, its easy to think that your decisions are the result of a great analysis that you make because you think differently and creatively, but that doesn’t mean that you are doing a good job for users. Its interesting how we manage a way out of the possibility of having feedback within the process, because we assume that we are capable of figuring things out by our&nbsp;own.
         <br />
@@ -282,12 +311,19 @@
       </p>
     </div>
   </div>
-  <div class='container section-content illus-content'>
-    <div class='text'>
-      <h2>
-        Illustration is a way to express a thought in another language
-        <sup>(04)</sup>
-      </h2>
+</div>
+<div class='container section-content illus-content'>
+  <div class='text'>
+    <span>
+      ILLUSTRATION FOR HEART
+    </span>
+    <h2>
+      A way to express a thought in another language
+    </h2>
+    <div class='content'>
+      <div class='image'>
+        <img alt='' src='img/photo.svg' />
+      </div>
       <p>
         Since I’m a child I draw, its a kind of hobbit for myself that transformed in a skill in my profesional life. I’m not an illustrator, I’m a Graphic Designer that has the ability to make some kind of cute illustrations. This difference its really important for me, an illustrator can handle many more graphical universes that I can possibly handle.
         <br />
@@ -295,12 +331,19 @@
       </p>
     </div>
   </div>
-  <div class='container section-content teach-content'>
-    <div class='text'>
-      <h2>
-        Teaching is a way of experiencing everything you think you've learned
-        <sup>(05)</sup>
-      </h2>
+</div>
+<div class='container section-content teach-content'>
+  <div class='text'>
+    <span>
+      LEARN BY TEACHING
+    </span>
+    <h2>
+      Re-experience the things you think you've learned
+    </h2>
+    <div class='content'>
+      <div class='image'>
+        <img alt='' src='img/photo.svg' />
+      </div>
       <p>
         In 2013 I started to teach in the cátedra Cosgaya in the essay typography in the University of Buenos Aires. Since the beginning It is one of  the biggest, yet more valuable, challenge I have in my career as a designer. Explain what you think you have learn and ask yourself about every decision you made when designing anything.
         <br />
@@ -308,12 +351,19 @@
       </p>
     </div>
   </div>
-  <div class='container section-content front-content'>
-    <div class='text'>
-      <h2>
-        From the frontend that I do, to the backend (that I wish to do someday), I love the code
-        <sup>(06)</sup>
-      </h2>
+</div>
+<div class='container section-content front-content'>
+  <div class='text'>
+    <span>
+      FRONTEND LOVER
+    </span>
+    <h2>
+      From the frontend that I do, to the backend that I don't
+    </h2>
+    <div class='content'>
+      <div class='image'>
+        <img alt='' src='img/photo.svg' />
+      </div>
       <p>
         First of all I'm not a real frontender. Everyday I learn new stuff about frontend I feel awful about myself. But also theres no day that I dont wanna do frontend o learn soñé thing new about it, not only for the challenge of making my design real, but for the pleasure of ensuring that is the best of my initial&nbsp;design.
         <br />
@@ -321,12 +371,19 @@
       </p>
     </div>
   </div>
-  <div class='container section-content music-content'>
-    <div class='text'>
-      <h2>
-        Drums and music for me, are a way to escape of the constant all day thoughts
-        <sup>(07)</sup>
-      </h2>
+</div>
+<div class='container section-content music-content'>
+  <div class='text'>
+    <span>
+      ABOUT MUSIC
+    </span>
+    <h2>
+      How to escape the constant all day thoughts
+    </h2>
+    <div class='content'>
+      <div class='image'>
+        <img alt='' src='img/photo.svg' />
+      </div>
       <p>
         Im i a musician? I really think Im not, but for me the music is a way to put away my mind from everyday thoughts, kind of a theraphy to stay sharp.
         <br />
@@ -334,20 +391,141 @@
       </p>
     </div>
   </div>
-</section>
+</div>
         </section>
-        <a class='section-trigger' data-trigger='#portfolio-expand' href='#portfolio-expand'>
-          <section class='portfolio'>
-            <div class='container'>
-              <div class='eye'>
-                <i class='fa fa-eye'></i>
-              </div>
-              <p>See my</p>
-              <h2>Portfolio</h2>
+        <section class='swap-paper portfolio' id='portfolio'>
+          <a class='close-button' data-trigger='#portfolio'></a>
+          <div class='container'>
+            <div class='icon'>
+              <img alt='' src='img/portfolio-icon.svg' />
             </div>
-          </section>
-        </a>
+            <p>See my</p>
+            <h2>Portfolio</h2>
+            <div class='portfolio-content'>
+              <hr />
+              <div class='flex row'>
+                <a class='project modal-trigger' data-trigger='#project1-modal' href='#project1-modal'>
+                  <div class='shot'>
+                    <img alt='' src='img/portfolio/proyect1-img1.png' />
+                  </div>
+                  <div class='title'>
+                    <h4>
+                      Andén
+                    </h4>
+                    <p>iOS / Android App</p>
+                  </div>
+                </a>
+                <a class='project modal-trigger' data-trigger='#project2-modal' href='#project2-modal'>
+                  <div class='shot'>
+                    <img alt='' src='img/portfolio/proyect1-img1.png' />
+                  </div>
+                  <div class='title'>
+                    <h4>
+                      Wherevent
+                    </h4>
+                    <p>Android app</p>
+                  </div>
+                </a>
+                <a class='project modal-trigger' data-trigger='#project3-modal' href='#project3-modal'>
+                  <div class='shot'>
+                    <img alt='' src='img/portfolio/proyect1-img1.png' />
+                  </div>
+                  <div class='title'>
+                    <h4>
+                      Petselfie
+                    </h4>
+                    <p>iOS app</p>
+                  </div>
+                </a>
+              </div>
+              <hr />
+              <div class='center'>
+                <button class='dribbble'>
+                  <a href='https://dribbble.com/joaquinlluis'>
+                    <i class='fa fa-dribbble'></i>
+                    View more on Dribbble
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='swap-paper contact' id='contact'>
+          <a class='close-button' data-trigger='#contact'></a>
+          <div class='container'>
+            <div class='icon'>
+              <img alt='' src='img/contact-icon.svg' />
+            </div>
+            <p>Here you can</p>
+            <h2>Contact me</h2>
+            <div class='contact-content'>
+  <hr />
+  <div class='flex container'>
+    <div class='image'>
+      <img alt='' src='img/photo.svg' />
+    </div>
+    <form action='post'>
+      <h4>
+        Let’s get in contact!
+      </h4>
+      <div class='input'>
+        <input id='email' name='email' placeholder='Type your email here...' type='text' />
+        <label for='email'>
+          Your email
+        </label>
+      </div>
+      <div class='input'>
+        <div class='select'>
+          <select id='subject' name='select'>
+            <option value='Select here…'>
+              Select a subject
+            </option>
+            <option value='Select'>
+              Professional contact
+            </option>
+            <option value='Select'>
+              Work inquiry
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class='input'>
+        <textarea cols='30' id='message' name='' placehoder='Type your message here...' rows='8'></textarea>
+        <label for='message'>
+          Message
+        </label>
+      </div>
+      <button type='submit'>
+        SEND MESSAGE
+      </button>
+    </form>
+  </div>
+</div>
+          </div>
+        </section>
       </section>
+      <script>
+        $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+        $('html, body').animate({
+        scrollTop: target.offset().top
+        }, 1000);
+        return false;
+        }
+        }
+        });
+        });
+        setTimeout(function(){
+        $('header').removeClass('loading1');
+        setTimeout(function(){
+        $('header').removeClass('loading2');
+        }, 1000);
+        }, 2000);
+      </script>
       <script>
         <!-- / Elements to inject -->
         var mySVGsToInject = document.querySelectorAll('img.inject-me');

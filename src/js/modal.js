@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  $('.close-button').click(function(){
+  $('.close-button').click(function(event){
+    event.stopPropagation()
     CloseId = $(this).data('trigger');
     $(CloseId).removeClass('active');
   });

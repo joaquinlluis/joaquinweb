@@ -1,21 +1,28 @@
 $(document).ready(function(){
-
-  $('.section-trigger').click(function(){
-    sectionId = $(this).data('trigger');
-    $('.section-trigger').removeClass('active');
-    $(this).addClass('active');
-    $('.section-expand').removeClass('active');
-    $(sectionId).toggleClass('active');
-  });
-  $('.close-button').click(function(){
-    sectionCloseId = $(this).data('trigger');
-    $(sectionCloseId).toggleClass('active');
+  $('.close-button').click(function(event){
+    event.stopPropagation()
+    CloseId = $(this).data('trigger');
+    $(CloseId).removeClass('active');
   });
 
   $('.modal-trigger').click(function(){
     sectionId = $(this).data('trigger');
     $('.modal').removeClass('active');
     $(sectionId).toggleClass('active');
+  });
+
+  $('.menu-trigger').click(function(){
+    $('.navigation-content').toggleClass('active');
+    $('.menu-trigger').toggleClass('active');
+  });
+
+  $('.swap-paper').click(function(){
+    swapactive = $('.swap-paper').hasClass('active');
+    if(swapactive) {
+      console.log('algo');
+    } else {
+      $(this).addClass('active');
+    }
   });
 
 });

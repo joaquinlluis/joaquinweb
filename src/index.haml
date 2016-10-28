@@ -46,15 +46,12 @@
         %br/
         Coded with love by me!
 
-    .menu-trigger
-      %span
-      %span
-      %span
 
-    %header
-      .logo
-        %img{:src => "img/logo.svg", :alt => "Imagen del logo"}/
-        %img{:src => "img/logo_mobile.svg", :alt => "Imagen del logo"}/
+    %header.loading1.loading2
+      .loader
+        .logo
+          %img.inject-me{:src => "img/logo.svg", :alt => "Imagen del logo"}/
+          / %img{:src => "img/logo_mobile.svg", :alt => "Imagen del logo"}/
 
       %nav.language
         %ul
@@ -63,6 +60,11 @@
           %li
             %a{:href => "#", :rel => "alternate"} ES
 
+    .menu-trigger
+      %span
+      %span
+      %span
+
     // MENU
     .section-menu
       .next
@@ -70,25 +72,18 @@
       %nav
         %ul.flex
           %li.active
-            .icon
             %a{:href => "#"} Intro
           %li
-            .icon
             %a{:href => "#"} UI Design
           %li
-            .icon
             %a{:href => "#"} UX Design
           %li
-            .icon
             %a{:href => "#"} Illustration
           %li
-            .icon
             %a{:href => "#"} Teaching
           %li
-            .icon
             %a{:href => "#"} Frontend
           %li
-            .icon
             %a{:href => "#"} Music
 
     // MODALS
@@ -143,11 +138,12 @@
 
 
       %section.papers
-
-        = partial 'text-content'
+        %section.swap-paper.text-content#text-content
+          %a.close-button{"data-trigger" => "#text-content"}
+          = partial 'text-content'
 
         %section.swap-paper.portfolio#portfolio
-          %a.close-button{"data-trigger" => "#portfolio", :href => "#"}
+          %a.close-button{"data-trigger" => "#portfolio"}
           .container
             .icon
               %img{:src => "img/portfolio-icon.svg", :alt => ""}/
@@ -156,7 +152,7 @@
             = partial 'portfolio'
 
         %section.swap-paper.contact#contact
-          %a.close-button{"data-trigger" => "#contact", :href => "#"}
+          %a.close-button{"data-trigger" => "#contact"}
           .container
             .icon
               %img{:src => "img/contact-icon.svg", :alt => ""}/
@@ -180,6 +176,12 @@
         }
         });
         });
+        setTimeout(function(){
+        $('header').removeClass('loading1');
+        setTimeout(function(){
+        $('header').removeClass('loading2');
+        }, 1000);
+        }, 2000);
       %script
         // Elements to inject
         var mySVGsToInject = document.querySelectorAll('img.inject-me');
