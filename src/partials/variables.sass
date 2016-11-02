@@ -9,8 +9,11 @@
     color: $ui-color
   .section-menu nav ul li.active
     background: darken($ui-color, 4%)
-  .portfolio, .social-net ul li a, .next:hover, .prev:hover, .menu-mobile li a, .section-portfolio
+  .portfolio, .social-net ul li a, .menu-mobile li a, .section-portfolio
     background: darken($ui-color, 4%)
+  +desktop
+    .next:hover, .prev:hover
+      background: darken($ui-color, 4%)
   .social-net ul li a:hover, button:hover, .portfolio:hover
     background: darken($ui-color, 6%)
   .contact
@@ -41,6 +44,17 @@ $desktop-width: 1024px
   -ms-transition-timing-function: ease-in-out
   -o-transition-timing-function: ease-in-out
   transition-timing-function: ease-in-out
+=animation-attr-infinite
+  -webkit-animation-fill-mode: both
+  -moz-animation-fill-mode: both
+  -o-animation-fill-mode: both
+  -ms-animation-fill-mode: both
+  animation-fill-mode: both
+  -webkit-animation-iteration-count: infinite
+  -moz-animation-iteration-count: infinite
+  -o-animation-iteration-count: infinite
+  -ms-animation-iteration-count: infinite
+  animation-iteration-count: infinite
 
 =keyframes($animation-name)
   @-webkit-keyframes #{$animation-name}

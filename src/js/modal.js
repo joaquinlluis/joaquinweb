@@ -3,12 +3,14 @@ $(document).ready(function(){
     event.stopPropagation()
     CloseId = $(this).data('trigger');
     $(CloseId).removeClass('active');
+    $('.background-fixer').removeClass('modal-active');
   });
 
   $('.modal-trigger').click(function(){
     sectionId = $(this).data('trigger');
     $('.modal').removeClass('active');
     $(sectionId).toggleClass('active');
+    $('.background-fixer').addClass('modal-active');
   });
 
   $('.menu-trigger').click(function(){

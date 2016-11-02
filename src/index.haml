@@ -13,152 +13,151 @@
     //%link{:href => "https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,300", :rel => "stylesheet", :type => "text/css"}/
 
   %body#body.intro
-
-    %section.navigation-content
-      %nav
-        %ul
-          %li
-            %a.modal-trigger{"data-trigger" => "#curriculum", :href => "#curriculum"}
-              CURRICULUM
-              %img{:src => "img/open-arrow.svg", :alt => "open section curriculumn", :width => "19", :height => "14"}/
-          %li
-            %a.section-trigger{"data-trigger" => "#contact-expand", :href => "#contact-expand"}
-              DRIBBBLE
-              %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
-          %li
-            %a{:href => "https://behance.com/joaquinlluis"}
-              BEHANCE
-              %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
-          %li
-            %a{:href => "https://medium.com/@joaquin.lluis"}
-              MEDIUM
-              %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
-          %li
-            %a{:href => "https://github.com/joaquinlluis22"}
-              GITHUB
-              %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
-          %li
-            %a{:href => "https://instagram.com/joaquinlluis"}
-              INSTAGRAM
-              %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
-      %span
-        © All rights reserved.
-        %br/
-        Coded with love by me!
-
-
-    %header.loading1.loading2
-      .loader
-        .logo
-          %img.inject-me{:src => "img/logo.svg", :alt => "Imagen del logo"}/
-          / %img{:src => "img/logo_mobile.svg", :alt => "Imagen del logo"}/
-
-      %nav.language
-        %ul
-          %li
-            %a{:href => "#", :rel => "alternate"} EN
-          %li
-            %a{:href => "#", :rel => "alternate"} ES
-
-    .menu-trigger
-      %span
-      %span
-      %span
-
-    // MENU
-    .section-menu
-      .next
-      .prev
-      %nav
-        %ul.flex
-          %li.active
-            %a{:href => "#"} Intro
-          %li
-            %a{:href => "#"} UI Design
-          %li
-            %a{:href => "#"} UX Design
-          %li
-            %a{:href => "#"} Illustration
-          %li
-            %a{:href => "#"} Teaching
-          %li
-            %a{:href => "#"} Frontend
-          %li
-            %a{:href => "#"} Music
-
-    // MODALS
-    .modal.curriculum#curriculum
-      .container
-        %a.close-button{"data-trigger" => "#curriculum", :href => "#"}
-        %h2
-          Do you want to
+    .background-fixer
+      %section.navigation-content
+        %nav
+          %ul
+            %li
+              %a.modal-trigger{"data-trigger" => "#curriculum", :href => "#curriculum"}
+                CURRICULUM
+                %img{:src => "img/open-arrow.svg", :alt => "open section curriculumn", :width => "19", :height => "14"}/
+            %li
+              %a.section-trigger{"data-trigger" => "#contact-expand", :href => "#contact-expand"}
+                DRIBBBLE
+                %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
+            %li
+              %a{:href => "https://behance.com/joaquinlluis"}
+                BEHANCE
+                %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
+            %li
+              %a{:href => "https://medium.com/@joaquin.lluis"}
+                MEDIUM
+                %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
+            %li
+              %a{:href => "https://github.com/joaquinlluis22"}
+                GITHUB
+                %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
+            %li
+              %a{:href => "https://instagram.com/joaquinlluis"}
+                INSTAGRAM
+                %img{:src => "img/ext-link.svg", :alt => "external link", :width => "25", :height => "9"}/
+        %span
+          © All rights reserved.
           %br/
-          see more?
-        .flex
-          .tags
-            %img{:src => "img/photo.svg", :alt => ""}/
-          .description
-            %p
-              Oh! Thanks! Thats flattering, Here you can download my curriculum
-            %button
-              DOWNLOAD CV
-
-    .modal#project1-modal
-      .container
-        %a.close-button{"data-trigger" => "#project1-modal", :href => "#"}
-        %h2
-          Here is the title for the
-          %br/
-          Project #1
-        .flex
-          .description
-            %img{:src => "img/description_icon.svg", :alt => ""}/
-            We have been busy making some updates to the PhotoKeeper desktop designs! This is part of the "save new album" flow where the user can name the album and select what photos to include.
-          .tags
-            %p Tags
-            .tag Branding
-            .tag App
-        %br/
-
-        %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
-        %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
-        %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
-
-    .modal#project2-modal
-      .container
-        %a.close-button{"data-trigger" => "#project2-modal", :href => "#"}
-
-    .modal#project3-modal
-      .container
-        %a.close-button{"data-trigger" => "#project3-modal", :href => "#"}
-
-    // MAIN CONTENT
-    .main-wrapper
-      = partial 'slider'
+          Coded with love by me!
 
 
-      %section.papers
-        %section.swap-paper.text-content#text-content
-          %a.close-button{"data-trigger" => "#text-content"}
-          = partial 'text-content'
+      %header.loading1.loading2
+        .loader
+          .logo
+            %img.inject-me{:src => "img/logo.svg", :alt => "Imagen del logo"}/
+            / %img{:src => "img/logo_mobile.svg", :alt => "Imagen del logo"}/
 
-        %section.swap-paper.portfolio#portfolio
-          %a.close-button{"data-trigger" => "#portfolio"}
-          .container
-            .icon
-              %img{:src => "img/portfolio-icon.svg", :alt => ""}/
-            %p See my
-            %h2 Portfolio
-            = partial 'portfolio'
+        %nav.language
+          %ul
+            %li
+              %a{:href => "#", :rel => "alternate"} EN
+            %li
+              %a{:href => "#", :rel => "alternate"} ES
 
-        %section.swap-paper.contact#contact
-          %a.close-button{"data-trigger" => "#contact"}
-          .container
-            .icon
-              %img{:src => "img/contact-icon.svg", :alt => ""}/
-            %p Here you can
-            %h2 Contact me
-            = partial 'contact'
+      .menu-trigger
+        %span
+        %span
+        %span
+
+      // MENU
+      .section-menu
+        .next
+        .prev
+        %nav
+          %ul.flex
+            %li.active
+              %a{:href => "#"} Intro
+            %li
+              %a{:href => "#"} UI Design
+            %li
+              %a{:href => "#"} UX Design
+            %li
+              %a{:href => "#"} Illustration
+            %li
+              %a{:href => "#"} Teaching
+            %li
+              %a{:href => "#"} Frontend
+            %li
+              %a{:href => "#"} Music
+
+      // MODALS
+      .modal.curriculum#curriculum
+        .container
+          %a.close-button{"data-trigger" => "#curriculum", :href => "#"}
+          %h2
+            Do you want to
+            %br/
+            see more?
+          .flex
+            .tags
+              %img{:src => "img/photo.svg", :alt => ""}/
+            .description
+              %p
+                Oh! Thanks! Thats flattering, Here you can download my curriculum
+              %button
+                DOWNLOAD CV
+
+      .modal#project1-modal
+        .container
+          %a.close-button{"data-trigger" => "#project1-modal", :href => "#"}
+          %h2
+            Here is the title for the
+            %br/
+            Project #1
+          .flex
+            .description
+              %img{:src => "img/description_icon.svg", :alt => ""}/
+              We have been busy making some updates to the PhotoKeeper desktop designs! This is part of the "save new album" flow where the user can name the album and select what photos to include.
+            .tags
+              %p Tags
+              .tag Branding
+              .tag App
+
+          %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
+          %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
+          %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
+
+      .modal#project2-modal
+        .container
+          %a.close-button{"data-trigger" => "#project2-modal", :href => "#"}
+
+      .modal#project3-modal
+        .container
+          %a.close-button{"data-trigger" => "#project3-modal", :href => "#"}
+
+      // MAIN CONTENT
+      .main-wrapper
+        = partial 'slider'
+
+
+        %section.papers
+          %section.swap-paper.text-content#text-content
+            %a.close-button{"data-trigger" => "#text-content"}
+            = partial 'text-content'
+
+          %section.swap-paper.portfolio#portfolio
+            %a.close-button{"data-trigger" => "#portfolio"}
+            .container
+              .icon
+                %img{:src => "img/portfolio-icon.svg", :alt => ""}/
+              %p See my
+              %h2 Portfolio
+              = partial 'portfolio'
+
+          %section.swap-paper.contact#contact
+            %a.close-button{"data-trigger" => "#contact"}
+            .container
+              .icon
+                %img{:src => "img/contact-icon.svg", :alt => ""}/
+              %p Here you can
+              %h2 Contact me
+              = partial 'contact'
 
 
       %script

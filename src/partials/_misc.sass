@@ -24,17 +24,22 @@ img
   text-align: center
 
 body
-  position: relative
   font-family: 'Poppins', sans-serif
   font-size: 16px
   font-weight: 400
   color: #666
+
+.background-fixer
   min-height: 100vh
   display: flex
   flex-direction: column
+  position: relative
   +desktop
     height: 100vh
     max-height: 100vh
+  &.modal-active
+    height: 100vh
+    overflow: hidden
 
 .main-wrapper
   position: relative

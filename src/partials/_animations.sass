@@ -43,8 +43,38 @@
   100%
     transform: rotate(45deg)
 
+//PULSE
++keyframes(pulse)
+  0
+    -webkit-transform: scale3d(1, 1, 1)
+    transform: scale3d(1, 1, 1)
+
+  50%
+    -webkit-transform: scale3d(1.1, 1.1, 1.1)
+    transform: scale3d(1.1, 1.1, 1.1)
+
+  100
+    -webkit-transform: scale3d(1, 1, 1)
+    transform: scale3d(1, 1, 1)
+
+
 // SWAP PAPERS
-+keyframes(swap-paper)
++keyframes(swap-paper-mobile)
+  0%
+    position: relative
+  45%
+    position: relative
+  80%
+    width: 100%
+    z-index: 3
+  100%
+    width: 100%
+    z-index: 3
+    height: 100%
+    order: -1
+
+
++keyframes(swap-paper-desk)
   0%
     position: relative
   45%
