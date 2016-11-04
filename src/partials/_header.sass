@@ -3,7 +3,7 @@
 
 header
   display: flex
-  position: absolute
+  position: fixed
   justify-content: space-between
   z-index: 3
   width: 100%
@@ -93,13 +93,15 @@ header
 
 
 .menu-trigger
-  position: absolute
+  position: fixed
   top: 28px
   left: 30px
   width: 32px
   height: 28px
   z-index: 3
   cursor: pointer
+  +desktop
+    position: absolute
   &.active
   span
     position: absolute

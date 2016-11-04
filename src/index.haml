@@ -10,7 +10,7 @@
     %script{:src => "js/slider.js"}
     %script{:src => "js/svg-injector.js"}
     %script{:src => "js/modal.js"}
-    //%link{:href => "https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,300", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,300", :rel => "stylesheet", :type => "text/css"}/
 
   %body#body.intro
     .background-fixer
@@ -60,7 +60,7 @@
             %li
               %a{:href => "#", :rel => "alternate"} ES
 
-      .menu-trigger
+      %a.menu-trigger{:href => "#body"}
         %span
         %span
         %span
