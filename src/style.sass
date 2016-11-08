@@ -35,13 +35,15 @@
 .close-button
   position: absolute
   top: 40px
-  right: 40px
+  right: 25px
   width: 40px
   height: 40px
   border: 2px solid #ccc
   border-radius: 50%
   transition: all 0.5s ease
   z-index: 2
+  +desktop
+    right: 40px
   &:after, &:before
     content: ''
     position: absolute
@@ -84,6 +86,7 @@
   img
     margin: 10px 0
   .container
+    max-width: 940px
     position: relative
     background: #fff
     transition: all 0.5s ease
@@ -116,8 +119,6 @@
     border-bottom: 2px solid #eee
     +desktop
       font-size: 38px
-      padding-bottom: 30px
-      margin-bottom: 30px
     br
       display: none
       +desktop
@@ -159,11 +160,16 @@
         top: 0
         border-style: solid
         border-width: 18px 0 18px 14px
+  .project-images
+    img
+      padding: 0
+      margin: 0
+      display: block
 
   // CURRICULUM
   &.curriculum
     .container
-      max-width: 640px
+      max-width: 460px
       .tags
         display: none
         +desktop
@@ -173,10 +179,12 @@
         border-radius: 50%
       p
         margin-bottom: 15px
-
+    .flex, .description
+      padding: 0
 // PORTFOLIO
 .portfolio, .contact
-  height: auto
+  .overflow-gradient
+    display: none
   &.active
     .portfolio-content, .contact-content
       display: block
@@ -186,6 +194,8 @@
       +animation-attr
       transform-origin: center
       animation-delay: 0.6s
+    .overflow-gradient
+      display: block
   .close-button
     opacity: 0.8
     border-color: #fff
@@ -242,8 +252,6 @@
 
 
 //CONTACT
-.contact
-  height: 115px
 .contact-content
   display: none
 
@@ -298,6 +306,7 @@
         color: rgba(255,255,255,0.5)
         border: none
         background: transparent
+        +appearance-none
         &:focus
           outline: none
           color: #fff
@@ -319,9 +328,7 @@
       color: #fff
       border: 2px solid rgba(255,255,255,0.5)
       background: transparent
-      appearance: none
-      -moz-appearance: none
-      -webkit-appearance: none
+      +appearance-none
       transition: all 0.5s ease
     input[type="text"]:focus, textarea:focus
       border-color: #fff
@@ -344,7 +351,6 @@
 // PAPERS
 .swap-paper
   position: relative
-  padding: 30px 15px
   background: #f2f2f2
   box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.04)
   transition: all 0.5s ease
@@ -367,12 +373,15 @@
     border-width: 35px 35px 0 0
     border-color: rgba(255,255,255,0.3) transparent transparent transparent
     transition: all 0.5s ease
-    z-index: 1
+    z-index: 2
   .container
     transition: all 0.5s ease
-    padding: 0px 5px
+    padding: 30px 20px
     +desktop
-      padding: 0px 20px
+      padding: 30px 35px
+      height: 100%
+      overflow-x: hidden
+      overflow-y: auto
   +desktop
     &:hover
       .container
@@ -398,15 +407,23 @@
     z-index: 1
   .close-button
     display: none
+  &.disappear
+    display: none
   &.active
+    display: block
+    position: relative
+    top: 0
+    left: 0
+    width: 100%
+    height: auto
+    min-height: 100%
+    z-index: 3
+    order: -1
     cursor: auto
     transition: all 0.5s ease
-    +animation(swap-paper-mobile 0.6s)
-    +animation-attr
     +desktop
-      +animation(swap-paper-desk 0.6s)
-      +animation-attr
-    transform-origin: center
+      height: 100%
+      flex: 1
     .close-button
       display: block
     &:hover
@@ -434,6 +451,18 @@
       width: 30px
       height: 38px
 
+// OVERFLOW GRADIENT
+.overflow-gradient
+  position: absolute
+  -webkit-box-shadow: 0px -10px 45px 30px rgba(255,255,255,1)
+  -moz-box-shadow: 0px -10px 45px 30px rgba(255,255,255,1)
+  box-shadow: 0px -10px 45px 30px rgba(255,255,255,1)
+  width: 100%
+  height: 0px
+  bottom: 0
+  left: 0
+  z-index: 1
+
 // TEXT CONTENT
 .text-content
   min-height: 400px
@@ -457,19 +486,15 @@
     display: none
     padding: 30px 20px
     background: #fff
-    &:after
-      content: ''
-      position: absolute
-      -webkit-box-shadow: 0px -10px 45px 30px rgba(255,255,255,1)
-      -moz-box-shadow: 0px -10px 45px 30px rgba(255,255,255,1)
-      box-shadow: 0px -10px 45px 30px rgba(255,255,255,1)
-      width: 100%
-      height: 0px
-      bottom: 0
-      left: 0
   &.active
     .content
       display: flex
+      opacity: 0
+      transition: all 0.5s ease
+      +animation(fadeinbottom 0.6s)
+      +animation-attr
+      transform-origin: center
+      animation-delay: 0.6s
 
 .text
   flex: 2

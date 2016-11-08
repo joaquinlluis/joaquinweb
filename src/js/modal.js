@@ -4,6 +4,7 @@ $(document).ready(function(){
     CloseId = $(this).data('trigger');
     $(CloseId).removeClass('active');
     $('.background-fixer').removeClass('modal-active');
+    $('.swap-paper').removeClass('disappear');
   });
 
   $('.modal-trigger').click(function(){
@@ -20,6 +21,7 @@ $(document).ready(function(){
 
   $('.swap-paper').click(function(){
     swapactive = $('.swap-paper').hasClass('active');
+    $('.swap-paper').addClass('disappear');
     if(swapactive) {
       console.log('algo');
     } else {

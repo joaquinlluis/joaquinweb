@@ -1,4 +1,5 @@
 
+
 //UI MIXIN
 =ui-colors($ui-color)
   #slider, button, footer, header, .navigation-content, .text span:after, .tag, .loader
@@ -11,6 +12,11 @@
     background: darken($ui-color, 4%)
   .portfolio, .social-net ul li a, .menu-mobile li a, .section-portfolio
     background: darken($ui-color, 4%)
+  .portfolio
+    .overflow-gradient
+      -webkit-box-shadow: 0px -10px 45px 30px darken($ui-color, 4%)
+      -moz-box-shadow: 0px -10px 45px 30px darken($ui-color, 4%)
+      box-shadow: 0px -10px 45px 30px darken($ui-color, 4%)
   +desktop
     .next:hover, .prev:hover
       background: darken($ui-color, 4%)
@@ -18,6 +24,13 @@
     background: darken($ui-color, 6%)
   .contact
     background: lighten($ui-color, 3%)
+    .overflow-gradient
+      -webkit-box-shadow: 0px -10px 45px 30px lighten($ui-color, 3%)
+      -moz-box-shadow: 0px -10px 45px 30px lighten($ui-color, 3%)
+      box-shadow: 0px -10px 45px 30px lighten($ui-color, 3%)
+  .swap-paper:before
+    border-color: lighten($ui-color, 10%) transparent transparent transparent
+
 
 //MEDIA QUERIE MIXIN
 $tablet-width: 768px
@@ -28,6 +41,15 @@ $desktop-width: 1024px
 =desktop
   @media (min-width: #{$desktop-width})
     @content
+
+// APPEAREANCE
+
+=appearance-none
+  -webkit-appearance: none
+  -moz-appearance: none
+  -ms-appearance: none
+  -o-appearance: none
+  appearance: none
 
 // ANIMATION MIXIN
 =animation-attr

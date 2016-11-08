@@ -60,7 +60,7 @@
             %li
               %a{:href => "#", :rel => "alternate"} ES
 
-      %a.menu-trigger{:href => "#body"}
+      %a.menu-trigger
         %span
         %span
         %span
@@ -95,11 +95,9 @@
             %br/
             see more?
           .flex
-            .tags
-              %img{:src => "img/photo.svg", :alt => ""}/
             .description
               %p
-                Oh! Thanks! Thats flattering, Here you can download my curriculum
+                Oh! Thanks! Thats flattering,  here you can download my curriculum
               %button
                 DOWNLOAD CV
 
@@ -118,10 +116,14 @@
               %p Tags
               .tag Branding
               .tag App
-
-          %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
-          %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
-          %img{:src => "img/portfolio/proyect1-img1.png", :alt => ""}/
+          .project-images
+            %img{:src => "img/portfolio/proj1/anden1.png", :alt => ""}/
+            %img{:src => "img/portfolio/proj1/anden2.png", :alt => ""}/
+            %img{:src => "img/portfolio/proj1/anden3.png", :alt => ""}/
+            %img{:src => "img/portfolio/proj1/anden4.png", :alt => ""}/
+            %img{:src => "img/portfolio/proj1/anden5.png", :alt => ""}/
+            %img{:src => "img/portfolio/proj1/anden6.png", :alt => ""}/
+            %img{:src => "img/portfolio/proj1/anden7.png", :alt => ""}/
 
       .modal#project2-modal
         .container
@@ -138,12 +140,13 @@
 
         %section.papers
           %section.swap-paper.text-content#text-content
-            %a.close-button{"data-trigger" => "#text-content"}
+            .overflow-gradient
             = partial 'text-content'
 
           %section.swap-paper.portfolio#portfolio
-            %a.close-button{"data-trigger" => "#portfolio"}
+            .overflow-gradient
             .container
+              %a.close-button{"data-trigger" => "#portfolio"}
               .icon
                 %img{:src => "img/portfolio-icon.svg", :alt => ""}/
               %p See my
@@ -151,8 +154,9 @@
               = partial 'portfolio'
 
           %section.swap-paper.contact#contact
-            %a.close-button{"data-trigger" => "#contact"}
+            .overflow-gradient
             .container
+              %a.close-button{"data-trigger" => "#contact"}
               .icon
                 %img{:src => "img/contact-icon.svg", :alt => ""}/
               %p Here you can
