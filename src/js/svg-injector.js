@@ -281,41 +281,41 @@
 
       // Handle all defs elements that have iri capable attributes as defined by w3c: http://www.w3.org/TR/SVG/linking.html#processingIRI
       // Mapping IRI addressable elements to the properties that can reference them:
-      var iriElementsAndProperties = {
-        'clipPath': ['clip-path'],
-        'color-profile': ['color-profile'],
-        'cursor': ['cursor'],
-        'filter': ['filter'],
-        'linearGradient': ['fill', 'stroke'],
-        'marker': ['marker', 'marker-start', 'marker-mid', 'marker-end'],
-        'mask': ['mask'],
-        'pattern': ['fill', 'stroke'],
-        'radialGradient': ['fill', 'stroke']
-      };
+      // var iriElementsAndProperties = {
+      //   'clipPath': ['clip-path'],
+      //   'color-profile': ['color-profile'],
+      //   'cursor': ['cursor'],
+      //   'filter': ['filter'],
+      //   'linearGradient': ['fill', 'stroke'],
+      //   'marker': ['marker', 'marker-start', 'marker-mid', 'marker-end'],
+      //   'mask': ['mask'],
+      //   'pattern': ['fill', 'stroke'],
+      //   'radialGradient': ['fill', 'stroke']
+      // };
 
-      var element, elementDefs, properties, currentId, newId;
-      Object.keys(iriElementsAndProperties).forEach(function (key) {
-        element = key;
-        properties = iriElementsAndProperties[key];
+      // var element, elementDefs, properties, currentId, newId;
+      // Object.keys(iriElementsAndProperties).forEach(function (key) {
+      //   element = key;
+      //   properties = iriElementsAndProperties[key];
 
-        elementDefs = svg.querySelectorAll('defs ' + element + '[id]');
-        for (var i = 0, elementsLen = elementDefs.length; i < elementsLen; i++) {
-          currentId = elementDefs[i].id;
-          newId = currentId + '-' + injectCount;
+      //   elementDefs = svg.querySelectorAll('defs ' + element + '[id]');
+      //   for (var i = 0, elementsLen = elementDefs.length; i < elementsLen; i++) {
+      //     currentId = elementDefs[i].id;
+      //     newId = currentId + '-' + injectCount;
 
-          // All of the properties that can reference this element type
-          var referencingElements;
-          forEach.call(properties, function (property) {
-            // :NOTE: using a substring match attr selector here to deal with IE "adding extra quotes in url() attrs"
-            referencingElements = svg.querySelectorAll('[' + property + '*="' + currentId + '"]');
-            for (var j = 0, referencingElementLen = referencingElements.length; j < referencingElementLen; j++) {
-              referencingElements[j].setAttribute(property, 'url(#' + newId + ')');
-            }
-          });
+      //     // All of the properties that can reference this element type
+      //     var referencingElements;
+      //     forEach.call(properties, function (property) {
+      //       // :NOTE: using a substring match attr selector here to deal with IE "adding extra quotes in url() attrs"
+      //       referencingElements = svg.querySelectorAll('[' + property + '*="' + currentId + '"]');
+      //       for (var j = 0, referencingElementLen = referencingElements.length; j < referencingElementLen; j++) {
+      //         referencingElements[j].setAttribute(property, 'url(#' + newId + ')');
+      //       }
+      //     });
 
-          elementDefs[i].id = newId;
-        }
-      });
+      //     elementDefs[i].id = newId;
+      //   }
+      // });
 
       // Remove any unwanted/invalid namespaces that might have been added by SVG editing tools
       svg.removeAttribute('xmlns:a');

@@ -1,8 +1,10 @@
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 420">
   <title>1_</title>
+
+  <rect id="_Rectangle_2" data-name="&lt;Rectangle&gt;" x="56.1968" y="347.7821" width="344.8242" height="3.5568" rx="1.7784" ry="1.7784" style="opacity: 0.08" class="fadein"/>
+  <rect id="_Rectangle_" data-name="&lt;Rectangle&gt;" x="168.4529" y="375.0909" width="121.8713" height="16.7747" rx="8.3874" ry="8.3874" style="opacity: 0.05" class="fadein"/>
+
   <g id="background" class="appearfromright">
-    <rect id="_Rectangle_" data-name="&lt;Rectangle&gt;" x="168.4529" y="375.0909" width="121.8713" height="16.7747" rx="8.3874" ry="8.3874" style="opacity: 0.05"/>
-    <rect id="_Rectangle_2" data-name="&lt;Rectangle&gt;" x="56.1968" y="347.7821" width="344.8242" height="3.5568" rx="1.7784" ry="1.7784" style="opacity: 0.08"/>
     <g style="opacity: 0.2">
       <line id="_Path_" data-name="&lt;Path&gt;" x1="104.5268" y1="66.3906" x2="255.151" y2="66.3906" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 3px"/>
       <line id="_Path_2" data-name="&lt;Path&gt;" x1="104.5268" y1="67.2842" x2="104.5268" y2="100.3736" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 3px"/>
@@ -163,16 +165,17 @@
     <rect id="_Rectangle_17" data-name="&lt;Rectangle&gt;" x="81.8307" y="303.7681" width="29.856" height="7.9203" rx="3.9602" ry="3.9602" style="opacity: 0.05"/>
     <rect id="_Rectangle_18" data-name="&lt;Rectangle&gt;" x="116.9489" y="303.7681" width="29.856" height="7.9203" rx="3.9602" ry="3.9602" style="opacity: 0.05"/>
     <rect id="_Rectangle_19" data-name="&lt;Rectangle&gt;" x="98.4978" y="315.7081" width="29.856" height="7.9203" rx="3.9602" ry="3.9602" style="opacity: 0.05"/>
-    <circle id="_Path_17" data-name="&lt;Path&gt;" cx="142.5982" cy="88.8921" r="8.5714" style="opacity: 0.08"/>
-    <circle id="_Path_18" data-name="&lt;Path&gt;" cx="163.5442" cy="88.8921" r="8.5714" style="opacity: 0.08"/>
-    <circle id="_Path_19" data-name="&lt;Path&gt;" cx="142.5982" cy="111.3691" r="8.5714" style="opacity: 0.08"/>
-    <circle id="_Path_20" data-name="&lt;Path&gt;" cx="163.5442" cy="111.3691" r="8.5714" style="opacity: 0.08"/>
-    <circle id="_Path_21" data-name="&lt;Path&gt;" cx="185.4554" cy="88.8921" r="8.5714" style="opacity: 0.08"/>
-    <circle id="_Path_22" data-name="&lt;Path&gt;" cx="338.5812" cy="220.565" r="6.3648" style="opacity: 0.08"/>
-    <circle id="_Path_23" data-name="&lt;Path&gt;" cx="359.3108" cy="220.565" r="6.3648" style="opacity: 0.08"/>
-    <circle id="_Path_24" data-name="&lt;Path&gt;" cx="116.8772" cy="264.2627" r="7.1004" style="opacity: 0.08"/>
-    <circle id="_Path_25" data-name="&lt;Path&gt;" cx="136.656" cy="264.2627" r="7.1004" style="opacity: 0.08"/>
   </g>
+    <circle id="_Path_17" data-name="&lt;Path&gt;" cx="142.5982" cy="88.8921" r="8.5714" style="opacity: 0.08" class="scalein"/>
+    <circle id="_Path_18" data-name="&lt;Path&gt;" cx="163.5442" cy="88.8921" r="8.5714" style="opacity: 0.08" class="scalein"/>
+    <circle id="_Path_19" data-name="&lt;Path&gt;" cx="142.5982" cy="111.3691" r="8.5714" style="opacity: 0.08" class="scalein"/>
+    <circle id="_Path_20" data-name="&lt;Path&gt;" cx="163.5442" cy="111.3691" r="8.5714" style="opacity: 0.08" class="scalein"/>
+    <circle id="_Path_21" data-name="&lt;Path&gt;" cx="185.4554" cy="88.8921" r="8.5714" style="opacity: 0.08" class="scalein"/>
+    <circle id="_Path_22" data-name="&lt;Path&gt;" cx="338.5812" cy="220.565" r="6.3648" style="opacity: 0.08" class="scalein"/>
+    <circle id="_Path_23" data-name="&lt;Path&gt;" cx="359.3108" cy="220.565" r="6.3648" style="opacity: 0.08" class="scalein"/>
+    <circle id="_Path_24" data-name="&lt;Path&gt;" cx="116.8772" cy="264.2627" r="7.1004" style="opacity: 0.08" class="scalein"/>
+    <circle id="_Path_25" data-name="&lt;Path&gt;" cx="136.656" cy="264.2627" r="7.1004" style="opacity: 0.08" class="scalein"/>
+
   <g id="character">
     <path d="M257.1951,250.0812H202.67c-.5341-11.9011-2.7635-9.5347-4.0028-19.75l-2.1053-23.7561h66.7411l-2.1053,23.7561C260.4139,240.5168,259.0823,236.9927,257.1951,250.0812Z" style="fill: #3a3a3a"/>
     <polygon points="256.814 258.575 203.051 258.575 200.783 208.029 259.082 208.029 256.814 258.575" style="fill: #3a3a3a"/>
