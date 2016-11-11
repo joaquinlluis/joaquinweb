@@ -1,5 +1,5 @@
-# StaticMatic Bare
+# My super portfolio
+An on going project that I´m currently working on.
 
-This is a bare skeleton for StaticMatic.
-
-Visit [https://github.com/mindeavor/staticmatic2](https://github.com/mindeavor/staticmatic2) for more information.
+When its finished you can see it here:
+http://joaquinlluis.com/
