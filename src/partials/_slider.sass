@@ -1,7 +1,7 @@
 // SLIDER
 
 .slider-box
-  z-index: 2
+  z-index: 4
   box-shadow: -10px 0px 0px 0px rgba(0, 0, 0, 0.04)
   min-height: 100vh
   order: 2
@@ -33,19 +33,34 @@
     position: relative
     display: none
     width: 100%
-    margin: auto
     z-index: 1
     flex: 1
     text-align: center
-    svg
+    margin: 80px auto 70px auto
+    +desktop
+      margin: auto
+    svg, img
       position: absolute
       left: 50%
       top: 50%
-      height: auto
-      width: auto
-      max-width: 100%
-      max-height: 100%
+      height: 100%
+      width: 100%
+      max-width: 800px
+      max-height: 590px
       transform: translate(-50%, -50%)
+    &.character
+      +desktop
+        display: block!important
+
+  .content-desktop
+    display: none
+    +desktop
+      display: block
+  .content-mobile
+    display: block
+    +desktop
+      display: none
+
   .slide-title
     flex: 0 0 105px
     position: relative
@@ -104,6 +119,12 @@
     &:before
       left: 33%
       transform: rotate(225deg)
+
+.hategradient
+  fill: -moz-linear-gradient(top,  rgba(229,87,87,1) 0%, rgba(229,87,87,0) 100%)
+  fill: -webkit-linear-gradient(top,  rgba(229,87,87,1) 0%,rgba(229,87,87,0) 100%)
+  fill: linear-gradient(to bottom,  rgba(229,87,87,1) 0%,rgba(229,87,87,0) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55757', endColorstr='#00e55757',GradientType=0 )
 
 // SLIDES and CONTENT
 

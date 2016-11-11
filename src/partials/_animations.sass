@@ -1,7 +1,59 @@
 // ANIMATIONS
 
+//CLASSES
+.fadein
+  +animation(fadein 1s)
+  +animation-attr
+
+.fadeintop
+  +animation(fadeintop 0.6s)
+  +animation-attr
+
+.fadeinbottom
+  +animation(fadeinbottom 0.6s)
+  +animation-attr
+
+.scalein
+  +animation(scalein 0.6s)
+  +animation-attr
+
+.appearfromleft
+  +animation(appearfromleft 0.6s)
+  +animation-attr
+
+.appearfromright
+  +animation(appearfromright 0.6s)
+  +animation-attr
+
+
+
+// SCALE IN
++keyframes(scalein)
+  0%
+    opacity: 0
+    transform: scale(0,0)
+  100%
+    opacity: 100%
+    transform: scale(1,1)
+
+// FADE IN
++keyframes(fadein)
+  0%
+    opacity: 0
+  100%
+    opacity: 100%
+
 // FADE IN TOP
 +keyframes(fadeintop)
+  0%
+    opacity: 0
+    transform: translateY(-25%)
+  100%
+    opacity: 100%
+    transform: translateY(0)
+
+// FADE IN BOTTOM
++keyframes(fadeinbottom)
   0%
     opacity: 0
     transform: translateY(25%)
@@ -12,12 +64,23 @@
 // APPEAR FROM LEFT
 +keyframes(appearfromleft)
   0%
-    transform: translateX(-100%)
+    opacity: 0
+    transform: translateX(-30%)
   100%
+    opacity: 1
+    transform: translateX(0)
+
+// APPEAR FROM RIGHT
++keyframes(appearfromright)
+  0%
+    opacity: 0
+    transform: translateX(30%)
+  100%
+    opacity: 1
     transform: translateX(0)
 
 // APPEAR FROM BOTTOM
-+keyframes(fadeinbottom)
++keyframes(appearfrombottom)
   0%
     display: none
     opacity: 0
@@ -56,44 +119,4 @@
   100
     -webkit-transform: scale3d(1, 1, 1)
     transform: scale3d(1, 1, 1)
-
-
-// SWAP PAPERS
-// +keyframes(swap-paper-mobile)
-//   0%
-//     position: relative
-//   45%
-//     position: relative
-//   80%
-//     width: 100%
-//     z-index: 3
-//   100%
-//     width: 100%
-//     z-index: 3
-//     height: 100%
-//     order: -1
-//     -webkit-order: -1
-
-
-// +keyframes(swap-paper-desk)
-//   0%
-//     position: relative
-//   45%
-//     position: relative
-//     order: -1
-//   50%
-//     position: absolute
-//   80%
-//     position: absolute
-//     top: 0
-//     left: 0
-//     width: 100%
-//     z-index: 3
-//   100%
-//     position: absolute
-//     top: 0
-//     left: 0
-//     width: 100%
-//     z-index: 3
-//     height: 100%
 
