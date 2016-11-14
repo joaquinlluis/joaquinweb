@@ -24,7 +24,14 @@ $(document).ready(function(){
   });
 
   function change(step) {
-    $('#body , #slider , .section-menu li').removeClass();
+    $('#body , #slider , .section-menu li').removeClass("intro");
+    $('#body , #slider , .section-menu li').removeClass("ui");
+    $('#body , #slider , .section-menu li').removeClass("ux");
+    $('#body , #slider , .section-menu li').removeClass("illus");
+    $('#body , #slider , .section-menu li').removeClass("teach");
+    $('#body , #slider , .section-menu li').removeClass("front");
+    $('#body , #slider , .section-menu li').removeClass("music");
+    $('#body , #slider , .section-menu li').removeClass("active");
     $('#body , #slider').addClass( classes[step] );
     $('.section-menu li:eq(' + step + ')').addClass('active');
   }

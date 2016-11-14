@@ -29,7 +29,25 @@
   +animation(appearfromright 0.6s)
   +animation-attr
 
+// INITIAL ANIMATIONS
 
++desktop
+  .slider-box, .papers, .section-menu
+    display: none
+
+  .init-animations
+    .slider-box
+      +animation(appearfromright2 0.6s)
+      +animation-attr
+      display: flex
+    .papers
+      +animation(appearfromleft2 0.6s)
+      +animation-attr
+      display: flex
+    .section-menu
+      +animation(fadeinbottom2 0.6s)
+      +animation-attr
+      display: flex
 
 // SCALE IN
 +keyframes(scalein)
@@ -88,9 +106,37 @@
     opacity: 1
     transform: translateX(0)
 
+// APPEAR FROM LEFT2
++keyframes(appearfromleft2)
+  0%
+    display: none
+    opacity: 0
+    transform: translateX(-30%)
+  10%
+    display: block
+    opacity: 0
+    transform: translateX(-30%)
+  100%
+    opacity: 1
+    transform: translateX(0)
+
 // APPEAR FROM RIGHT
 +keyframes(appearfromright)
   0%
+    opacity: 0
+    transform: translateX(30%)
+  100%
+    opacity: 1
+    transform: translateX(0)
+
+// APPEAR FROM RIGHT2
++keyframes(appearfromright2)
+  0%
+    display: none
+    opacity: 0
+    transform: translateX(30%)
+  10%
+    display: block
     opacity: 0
     transform: translateX(30%)
   100%
