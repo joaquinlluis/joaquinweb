@@ -160,7 +160,7 @@
       <rect x="214.5676" y="172.9957" width="9.7864" height="2.3146" rx="1.0104" ry="1.0104" transform="translate(461.6268 315.0358) rotate(171.7554)" style="fill: #3a3a3a"/>
     </g>
   </g>
-  <g id="mousehand">
+  <g id="mousehand" class="ui-mousehand">
     <path id="_Rectangle_22" data-name="&lt;Rectangle&gt;" d="M252.7134,254.8962h6.9447a10.1461,10.1461,0,0,1,10.1461,10.1461v8.7884a0,0,0,0,1,0,0h-27.237a0,0,0,0,1,0,0v-8.7884a10.1461,10.1461,0,0,1,10.1461-10.1461Z" style="fill: #feccae"/>
     <rect id="_Rectangle_23" data-name="&lt;Rectangle&gt;" x="233.8874" y="263.1742" width="27.1159" height="10.6566" rx="4.8393" ry="4.8393" style="fill: #fff"/>
   </g>
