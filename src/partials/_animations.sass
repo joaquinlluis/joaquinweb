@@ -66,6 +66,41 @@
   +animation(dribbble-ball 1s)
   +animation-attr-infinite
 
+.teach-wave-hand
+  +animation(teach-wave-hand 2s)
+  +animation-attr-infinite
+  transform-origin: 1% 42%
+  -ms-transform-origin: 1% 42%
+  -o-transform-origin: 1% 42%
+  -moz-transform-origin: 1% 42%
+
+.front-sweat
+  +animation(front-sweat 5s)
+  +animation-attr-infinite
+
+.front-lamp
+  +animation(front-lamp 3s)
+  +animation-attr-infinite
+  transform-origin: 50% 0%
+  -ms-transform-origin: 50% 0%
+  -o-transform-origin: 50% 0%
+  -moz-transform-origin: 50% 0%
+
+.front-lamplight
+  +animation(front-lamplight 3s)
+  +animation-attr-infinite
+
+.music-tophihat
+  +animation(music-tophihat 1s)
+  +animation-attr-infinite
+
+.music-crash
+  +animation(music-crash 1s)
+  +animation-attr-infinite
+  transform-origin: 50% 0%
+  -ms-transform-origin: 50% 0%
+  -o-transform-origin: 50% 0%
+  -moz-transform-origin: 50% 0%
 
 +keyframes(intro-wave-hand)
   0%
@@ -99,7 +134,84 @@
   75%
     transform: translateY(0)
   100%
+
++keyframes(teach-wave-hand)
+  0%
+    transform: rotate(-10deg)
+  50%
+    transform: rotate(15deg)
+  100%
+    transform: rotate(-10deg)
+
+
++keyframes(front-sweat)
+  0%
+    opacity: 0
     transform: translateY(-20%)
+  30%
+    opacity: 1
+    transform: translateY(0)
+  70%
+    opacity: 1
+    transform: translateY(0)
+  100%
+    opacity: 0
+    transform: translateY(20%)
+
++keyframes(front-lamp)
+  0%
+    transform: rotate(0deg)
+  10%
+    transform: rotate(10deg)
+  30%
+    transform: rotate(-10deg)
+  40%
+    transform: rotate(0deg)
+  100%
+
++keyframes(front-lamplight)
+  0%
+    opacity: 1
+  58%
+    opacity: 1
+  60%
+    opacity: 0
+  62%
+    opacity: 0
+  68%
+    opacity: 1
+  70%
+    opacity: 0
+  72%
+    opacity: 0
+  78%
+    opacity: 1
+  90%
+    opacity: 1
+  92%
+    opacity: 0
+  100%
+    opacity: 0
+
++keyframes(music-tophihat)
+  0%
+    transform: translateY(33%)
+  90%
+    transform: translateY(0%)
+  100%
+    transform: translateY(33%)
+
++keyframes(music-crash)
+  0%
+    transform: rotate(0deg)
+  10%
+    transform: rotate(10deg)
+  30%
+    transform: rotate(-10deg)
+  40%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(0deg)
 
 // SCALE IN
 +keyframes(scalein)
@@ -133,6 +245,20 @@
     transform: translateY(25%)
   100%
     opacity: 100%
+    transform: translateY(0)
+
+// FADE IN BOTTOM
++keyframes(fadeinbottom2)
+  0% 
+    display: none
+    opacity: 0
+    transform: translateY(80%)
+  10%
+    display: block
+    opacity: 0
+    transform: translateY(80%)
+  100%
+    opacity: 1
     transform: translateY(0)
 
 // APPEAR FROM BOTTOM
