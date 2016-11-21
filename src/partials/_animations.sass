@@ -102,6 +102,29 @@
   -o-transform-origin: 50% 0%
   -moz-transform-origin: 50% 0%
 
+.music-arm1
+  +animation(music-arm1 .5s)
+  +animation-attr-infinite
+  transform-origin: 100% 30%
+  -ms-transform-origin: 100% 30%
+  -o-transform-origin: 100% 30%
+  -moz-transform-origin: 100% 30%
+
+.music-arm2
+  +animation(music-arm2 1s)
+  +animation-attr-infinite
+  transform-origin: 57% 24%
+  -ms-transform-origin: 57% 24%
+  -o-transform-origin: 57% 24%
+  -moz-transform-origin: 57% 24%
+.music-hand2
+  +animation(music-hand2 1s)
+  +animation-attr-infinite
+  transform-origin: 90% 70%
+  -ms-transform-origin: 90% 70%
+  -o-transform-origin: 90% 70%
+  -moz-transform-origin: 90% 70%
+
 +keyframes(intro-wave-hand)
   0%
     transform: rotate(0deg)
@@ -142,7 +165,6 @@
     transform: rotate(15deg)
   100%
     transform: rotate(-10deg)
-
 
 +keyframes(front-sweat)
   0%
@@ -212,6 +234,30 @@
     transform: rotate(0deg)
   100%
     transform: rotate(0deg)
+
++keyframes(music-arm1)
+  0%
+    transform: rotate(-10deg)
+  50%
+    transform: rotate(15deg)
+  100%
+    transform: rotate(-10deg)
+
++keyframes(music-arm2)
+  0%
+    transform: rotate(-10deg)
+  50%
+    transform: rotate(-35deg)
+  100%
+    transform: rotate(-10deg)
+
++keyframes(music-hand2)
+  0%
+    transform: rotate(20deg)
+  50%
+    transform: rotate(-50deg)
+  100%
+    transform: rotate(20deg)
 
 // SCALE IN
 +keyframes(scalein)
