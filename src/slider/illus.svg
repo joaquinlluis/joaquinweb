@@ -15,7 +15,7 @@
   </defs>
   <title>1_</title>
   <g id="hand" class="fadein">
-    <rect id="_Rectangle_" data-name="&lt;Rectangle&gt;" x="280.042" y="258.6456" width="25.4887" height="15.1852" style="fill: #feccae"/>
+    <rect id="_Rectangle_" data-name="&lt;Rectangle&gt;" x="267.042" y="258.6456" width="38.4887" height="15.1852" style="fill: #feccae"/>
     <path id="_Rectangle_2" data-name="&lt;Rectangle&gt;" d="M306.9225,254.5807h5.9527a9.9776,9.9776,0,0,1,9.9776,9.9776v9.2724a0,0,0,0,1,0,0H296.9449a0,0,0,0,1,0,0v-9.2724a9.9776,9.9776,0,0,1,9.9776-9.9776Z" style="fill: #feccae"/>
     <line id="_Path_" data-name="&lt;Path&gt;" x1="305.5307" y1="273.8307" x2="318.4539" y2="233.4167" style="fill: none;stroke: #515151;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 5px"/>
   </g>
@@ -41,7 +41,6 @@
     <ellipse cx="229.6922" cy="226.8642" rx="14.1832" ry="9.5171" style="fill: #424242"/>
     <path d="M219.2683,214.4734h21.3288a0,0,0,0,1,0,0v8.1343a8.467,8.467,0,0,1-8.467,8.467h-4.3948a8.467,8.467,0,0,1-8.467-8.467v-8.1343A0,0,0,0,1,219.2683,214.4734Z" style="fill: #f9bfa2"/>
     <polygon points="188.621 285.776 167.726 282.96 171.13 261.164 192.025 263.981 188.621 285.776" style="fill: #feccae"/>
-    <polygon points="271.379 285.776 292.274 282.96 288.87 261.164 267.975 263.981 271.379 285.776" style="fill: #feccae"/>
     <polygon points="185.747 329.455 170.914 329.455 167.726 282.96 188.621 285.776 185.747 329.455" style="fill: #feccae"/>
     <path d="M186.8878,347.7761l-14.4963-2.0536a3.9961,3.9961,0,0,1-3.417-4.3413l1.5531-16.0566,15.6362-2.1482,3.7436,3.1967a5.6039,5.6039,0,0,1,1.8981,3.3987l1.56,10.0086a3.996,3.996,0,0,1-.4842,2.6072l-1.9687,3.4238A3.9961,3.9961,0,0,1,186.8878,347.7761Z" style="fill: #feccae"/>
 
@@ -87,11 +86,6 @@
       <line x1="172.2382" y1="294.6798" x2="179.2991" y2="294.0531" style="fill: none;stroke: #efb49a;stroke-linecap: round;stroke-miterlimit: 10"/>
       <line x1="172.4129" y1="299.2971" x2="179.4737" y2="298.6705" style="fill: none;stroke: #efb49a;stroke-linecap: round;stroke-miterlimit: 10"/>
       <line x1="172.6052" y1="303.9149" x2="179.666" y2="303.2883" style="fill: none;stroke: #efb49a;stroke-linecap: round;stroke-miterlimit: 10"/>
-    </g>
-    <g>
-      <line x1="287.9005" y1="294.6798" x2="280.8396" y2="294.0531" style="fill: none;stroke: #efb49a;stroke-linecap: round;stroke-miterlimit: 10"/>
-      <line x1="287.7258" y1="299.2971" x2="280.665" y2="298.6705" style="fill: none;stroke: #efb49a;stroke-linecap: round;stroke-miterlimit: 10"/>
-      <line x1="287.5335" y1="303.9149" x2="280.4726" y2="303.2883" style="fill: none;stroke: #efb49a;stroke-linecap: round;stroke-miterlimit: 10"/>
     </g>
     <path d="M232.9963,222.4766a3.1006,3.1006,0,0,1-6.2011,0" style="fill: none;stroke: #efb49a;stroke-linecap: round;stroke-miterlimit: 10"/>
     <path d="M192.2779,263.9806l-21.9563-2.96a1.5714,1.5714,0,0,1-1.3424-1.8015l.5748-3.6552a1.5714,1.5714,0,0,1,1.7623-1.3132l22.0927,2.9779Z" style="fill: #3f3f3f"/>

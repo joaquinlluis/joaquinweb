@@ -63,7 +63,7 @@
   +animation-attr-infinite
 
 .illus-dribbble-ball
-  +animation(dribbble-ball 1s)
+  +animation(dribbble-ball 2s)
   +animation-attr-infinite
 
 .teach-wave-hand
@@ -90,12 +90,24 @@
   +animation(front-lamplight 3s)
   +animation-attr-infinite
 
+.music-character
+  +animation(music-character .5s)
+  +animation-attr-infinite
+
+.music-head
+  +animation(music-head 2s)
+  +animation-attr-infinite
+  transform-origin: 50% 90%
+  -ms-transform-origin: 50% 90%
+  -o-transform-origin: 50% 90%
+  -moz-transform-origin: 50% 90%
+
 .music-tophihat
-  +animation(music-tophihat 1s)
+  +animation(music-tophihat .5s)
   +animation-attr-infinite
 
 .music-crash
-  +animation(music-crash 1s)
+  +animation(music-crash .5s)
   +animation-attr-infinite
   transform-origin: 50% 0%
   -ms-transform-origin: 50% 0%
@@ -109,6 +121,13 @@
   -ms-transform-origin: 100% 30%
   -o-transform-origin: 100% 30%
   -moz-transform-origin: 100% 30%
+.music-hand1
+  +animation(music-hand1 .5s)
+  +animation-attr-infinite
+  transform-origin: 90% 70%
+  -ms-transform-origin: 90% 70%
+  -o-transform-origin: 90% 70%
+  -moz-transform-origin: 90% 70%
 
 .music-arm2
   +animation(music-arm2 1s)
@@ -124,6 +143,21 @@
   -ms-transform-origin: 90% 70%
   -o-transform-origin: 90% 70%
   -moz-transform-origin: 90% 70%
+.music-basedrum
+  +animation(music-basedrum 1s)
+  +animation-attr-infinite
+  transform-origin: center
+  -ms-transform-origin: center
+  -o-transform-origin: center
+  -moz-transform-origin: center
+
+.music-snare
+  +animation(music-snare 1s)
+  +animation-attr-infinite
+  transform-origin: center
+  -ms-transform-origin: center
+  -o-transform-origin: center
+  -moz-transform-origin: center
 
 +keyframes(intro-wave-hand)
   0%
@@ -154,9 +188,10 @@
     transform: translateY(0%)
   60%
     transform: translateY(-5%)  
-  75%
+  65%
     transform: translateY(0)
   100%
+    transform: translateY(-20%)
 
 +keyframes(teach-wave-hand)
   0%
@@ -225,15 +260,37 @@
 
 +keyframes(music-crash)
   0%
-    transform: rotate(0deg)
+    transform: rotate(0deg) scale(1,1)
   10%
-    transform: rotate(10deg)
+    transform: rotate(10deg) scale(1.05,1.05)
   30%
-    transform: rotate(-10deg)
+    transform: rotate(-10deg) scale(1.05,1.05)
   40%
-    transform: rotate(0deg)
+    transform: rotate(0deg) scale(1,1)
   100%
     transform: rotate(0deg)
+
++keyframes(music-character)
+  0%
+    transform: translateY(2%)
+  90%
+    transform: translateY(0%)
+  100%
+    transform: translateY(2%)
+
++keyframes(music-head)
+  0%
+    transform: rotate(0)
+  10%
+    transform: rotate(10deg)
+  20%
+    transform: rotate(0)
+  80%
+    transform: rotate(0)
+  90%
+    transform: rotate(-10deg)
+  100%
+    transform: rotate(0)
 
 +keyframes(music-arm1)
   0%
@@ -243,10 +300,18 @@
   100%
     transform: rotate(-10deg)
 
++keyframes(music-hand1)
+  0%
+    transform: rotate(20deg)
+  15%
+    transform: rotate(-30deg)
+  100%
+    transform: rotate(20deg)
+
 +keyframes(music-arm2)
   0%
     transform: rotate(-10deg)
-  50%
+  15%
     transform: rotate(-35deg)
   100%
     transform: rotate(-10deg)
@@ -254,10 +319,34 @@
 +keyframes(music-hand2)
   0%
     transform: rotate(20deg)
-  50%
+  15%
     transform: rotate(-50deg)
   100%
     transform: rotate(20deg)
+
++keyframes(music-snare)
+  0%
+    transform: scale(1,1)
+  15%
+    transform: scale(1,1)
+  25%
+    transform: scale(1.1,1.1)
+  35%
+    transform: scale(1,1)
+  100%
+    transform: scale(1,1)
+
++keyframes(music-basedrum)
+  0%
+    transform: scale(1,1)
+  40%
+    transform: scale(1,1)
+  50%
+    transform: scale(1.1,1.1)
+  60%
+    transform: scale(1,1)
+  100%
+    transform: scale(1,1)
 
 // SCALE IN
 +keyframes(scalein)
@@ -399,11 +488,9 @@
   0
     -webkit-transform: scale3d(1, 1, 1)
     transform: scale3d(1, 1, 1)
-
   50%
     -webkit-transform: scale3d(1.1, 1.1, 1.1)
     transform: scale3d(1.1, 1.1, 1.1)
-
   100
     -webkit-transform: scale3d(1, 1, 1)
     transform: scale3d(1, 1, 1)
