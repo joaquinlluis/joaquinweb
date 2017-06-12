@@ -15,20 +15,9 @@ header
   +desktop
     position: relative
 
-  nav.language
-    margin: auto 15px auto auto
-    ul li
-      display: inline-block
-      padding: 0 15px
-      &:first-child
-        border-right: 2px solid rgba(0,0,0,0.1)
-      a
-        font-size: 15px
-        color: #fff
   .loader
     position: absolute
-    width: 46px
-    max-width: 300px
+    width: 100%
     height: 80px
     left: 50%
     top: 0px
@@ -36,63 +25,39 @@ header
     transform: translateX(-50%)
     transition: width 1s ease, height 1s ease
     +desktop
-      width: 240px
+      width: 100%
       margin: auto
-  .logo
-    position: absolute
-    left: 50%
-    top: 50%
-    width: 46px
-    height: 26px
-    transform: translate(-50%, -50%)
-    transition: all 1s ease
-    .l1, .l2
-      transform: translateX(-139px)
-    .rest-name, .rest-lastname
-      opacity: 0
-      transition: all 1s ease
-    .rest-name rect, .rest-lastname rect
-      transition: all 1s ease
-      width: 0px
-      overflow: hidden
 
-    +desktop
-      width: 238px
-      .rest-name, .rest-lastname
-        opacity: 1
-      .l1, .l2
-        transform: translateX(0)
-      .rest-name rect, .rest-lastname rect
-        width: 130px
-        overflow: hidden
-
-
-header
   &.loading2
     z-index: 4
     overflow: inherit
     .loader
       position: fixed
-      width: 100%
-      max-width: 100%
       z-index: 999
       left: 0px
       top: 0px
       transform: inherit
-    .logo
-      width: 46px
-      .l1, .l2
-        transform: translateX(-139px)
-      .rest-name rect, .rest-lastname rect
-        width: 0px
-      .rest-name, .rest-lastname
-        opacity: 0
-        transition: all 1s ease
   &.loading1
     .loader
       height: 100%
 
-
+.logo
+  position: absolute
+  width: 100%
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  color: #fff
+  font-size: 30px
+  font-weight: 600
+  text-align: center
+  .desktop
+    display: none
+  +desktop
+    .desktop
+      display: block
+    .mobile
+      display: none
 
 
 .menu-trigger
