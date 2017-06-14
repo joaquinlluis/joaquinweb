@@ -2,21 +2,31 @@
 
 //UI MIXIN
 =ui-colors($ui-color)
+
+  // BACKGROUND
   #slider, button, footer, header, .navigation-content, .section-name:after, .tag, .loader
     background: $ui-color
+
   .tag:after
     border-color: transparent transparent transparent $ui-color
-  .text h2, .section-cv h2, .modal h2, .readme
+
+  // TITLES
+  .text-title, .section-cv h2, .modal h2, .text-readme
     color: $ui-color
+
+  // BACKGROUND DARKEN
   .section-menu nav ul li.active
     background: darken($ui-color, 4%)
   .portfolio, .social-net ul li a, .menu-mobile li a, .section-portfolio
     background: darken($ui-color, 4%)
+
+
   .portfolio
     .overflow-gradient
       -webkit-box-shadow: 0px -10px 45px 30px darken($ui-color, 4%)
       -moz-box-shadow: 0px -10px 45px 30px darken($ui-color, 4%)
       box-shadow: 0px -10px 45px 30px darken($ui-color, 4%)
+
   +desktop
     .next:hover, .prev:hover
       background: darken($ui-color, 4%)
@@ -32,7 +42,9 @@
     border-color: lighten($ui-color, 10%) transparent transparent transparent
 
 
-//MEDIA QUERIE MIXIN
+// MIXINS
+
+//MEDIA QUERIES MIXIN
 $tablet-width: 768px
 $desktop-width: 1024px
 =tablet
@@ -43,7 +55,6 @@ $desktop-width: 1024px
     @content
 
 // APPEAREANCE
-
 =appearance-none
   -webkit-appearance: none
   -moz-appearance: none

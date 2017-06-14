@@ -17,6 +17,13 @@ $(document).ready(function(){
   $('.menu-trigger').click(function(){
     $('.navigation-content').toggleClass('active');
     $('.menu-trigger').toggleClass('active');
+    $('.menu-background').fadeToggle('3000');
+  });
+
+  $('.menu-background').click(function(){
+    $('.navigation-content').toggleClass('active');
+    $('.menu-trigger').toggleClass('active');
+    $('.menu-background').fadeToggle('3000');
   });
 
   $('.swap-paper').click(function(){
