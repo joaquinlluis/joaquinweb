@@ -1,4 +1,26 @@
 
+// MAIN CONTENT
+
+.papers
+  display: flex
+  min-height: 600px
+  flex-direction: column
+  position: relative
+  overflow: hidden
+  order: 2
+  margin-bottom: 60px
+  +desktop
+    display: none
+    min-height: auto
+    order: 1
+    margin-bottom: 0px
+  .flex
+    flex-direction: column
+    +tablet
+      flex-direction: row
+    +desktop
+      flex-direction: row
+
 // PAPERS
 .swap-paper
   position: relative
@@ -7,14 +29,19 @@
   transition: all 0.5s ease
   cursor: pointer
   overflow: hidden
+  transition: all 0.5s ease
+  flex: 1
   +desktop
     overflow: inherit
-  &:nth-child(1)
-    z-index: 3
-  &:nth-child(2)
-    z-index: 2
-  &:nth-child(3)
-    z-index: 1
+
+    &:hover
+      .container
+        transition: all 0.5s ease
+        transform: scale(1.02,1.02)
+      .icon
+        +animation(pulse 1s)
+        +animation-attr-infinite
+  
   &:before
     content: ''
     position: absolute
@@ -24,23 +51,7 @@
     border-width: 35px 35px 0 0
     border-color: rgba(255,255,255,0.3) transparent transparent transparent
     transition: all 0.5s ease
-    z-index: 2
-  .container
-    transition: all 0.5s ease
-    padding: 30px 20px
-    +desktop
-      padding: 30px 35px
-      height: 100%
-      overflow-x: hidden
-      overflow-y: auto
-  +desktop
-    &:hover
-      .container
-        transition: all 0.5s ease
-        transform: scale(1.02,1.02)
-      .icon
-        +animation(pulse 1s)
-        +animation-attr-infinite
+    z-index: 2  
 
   &:hover:before
     border-width: 45px 45px 0 0
@@ -56,22 +67,15 @@
     border-color: transparent transparent rgba(0,0,0,0.1) transparent
     transition: all 0.5s ease
     z-index: 9
+
   .close-button
     display: none
   &.disappear
-    display: none
+    flex: 0
   &.active
-    display: block
     position: relative
-    top: 0
-    left: 0
     width: 100%
-    height: auto
-    min-height: 100%
-    z-index: 3
-    order: -1
     cursor: auto
-    transition: all 0.5s ease
     padding-top: 80px
     +desktop
       padding-top: 0
@@ -84,6 +88,16 @@
         transform: scale(1,1)
       .icon
         animation: none
+
+
+  .container
+    transition: all 0.5s ease
+    padding: 30px 20px
+    +desktop
+      padding: 30px 35px
+      height: 100%
+      overflow-x: hidden
+      overflow-y: auto
   h2
     font-size: 35px
     font-weight: 700
