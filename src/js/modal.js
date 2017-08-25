@@ -26,14 +26,13 @@ $(document).ready(function(){
     $('.menu-background').fadeToggle('3000');
   });
 
-  $('.swap-paper').click(function(){
-    swapactive = $('.swap-paper').hasClass('active');
-    $('.swap-paper').addClass('disappear');
-    if(swapactive) {
-      console.log('algo');
-    } else {
-      $(this).addClass('active');
-    }
-  });
+  $('.swap-paper').click(function() {
+    $(this).removeClass('disappear');
+    $('.swap-paper').removeClass('active');
+    $(this).addClass('active');
+    $('.swap-paper').not(this).each(function() {
+        $(this).addClass('disappear');    
+    });
+});
 
 });
