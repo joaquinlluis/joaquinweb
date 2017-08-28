@@ -22,28 +22,25 @@
   height: 40px
   border: 2px solid #ccc
   border-radius: 50%
-  transition: all 0.5s ease
+  transition: all 0.3s ease
   z-index: 2
   +desktop
     right: 40px
   &:after, &:before
     content: ''
     position: absolute
-    top: 46%
-    left: 21%
+    top: 17px
+    left: 8px
     width: 20px
     height: 2px
     transform: rotate(45deg)
     background: #ccc
-    transition: all 0.5s ease
+    transition: all 0.3px ease
   &:before
     transform: rotate(135deg)
 .close-button:hover
   opacity: 0.8
-  &:after
-    transform: rotate(135deg)
-  &:before
-    transform: rotate(45deg)
+  transform: rotate(-90deg)
 
 
 
@@ -138,10 +135,10 @@
       &:after
         content: ''
         position: absolute
-        right: -14px
+        right: -11px
         top: 0
         border-style: solid
-        border-width: 18px 0 18px 14px
+        border-width: 15px 0 14px 11px
   .project-images
     img
       padding: 0
@@ -174,7 +171,7 @@
       display: block
       opacity: 0
       transition: all 0.5s ease
-      +animation(fadeinbottom2 0.6s)
+      +animation(fadein 0.6s)
       +animation-attr
       transform-origin: center
       animation-delay: 0.6s
