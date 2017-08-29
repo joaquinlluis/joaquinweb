@@ -31,14 +31,22 @@ header
   &.loading2
     z-index: 4
     overflow: inherit
+    +superdesktop
+      height: 70px
     .loader
       position: fixed
       z-index: 999
       left: 0px
       top: 0px
       transform: inherit
+      +superdesktop
+        position: absolute
+        height: 100%
   &.loading1
     .loader
+      height: 100%
+    +superdesktop
+      position: absolute
       height: 100%
 
 .logo
@@ -128,6 +136,8 @@ header
   z-index: 3
   &.active
     left: 0
+  +superdesktop
+    position: absolute
 
   // RESPONSIVE
   +tablet
@@ -165,6 +175,7 @@ header
     font-size: 15px
     font-weight: 600
     color: rgba(255,255,255,0.4)
+    background: rgba(0,0,0,0.05)
 
 .menu-background
   display: none

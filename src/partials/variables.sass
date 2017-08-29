@@ -47,11 +47,15 @@
 //MEDIA QUERIES MIXIN
 $tablet-width: 768px
 $desktop-width: 1024px
+$superdesktop-width: 1600px
 =tablet
   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
     @content
 =desktop
   @media (min-width: #{$desktop-width})
+    @content
+=superdesktop
+  @media (min-width: #{$superdesktop-width})
     @content
 
 // APPEAREANCE
