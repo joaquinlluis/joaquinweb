@@ -30,6 +30,21 @@
     %link{:href => "https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,300", :rel => "stylesheet", :type => "text/css"}/
 
   %body#body.intro
+    .loading
+      .loading-progressbar
+      .loading-smile
+        ☺
+      .loading-title
+        This website
+        %br
+        is loading
+      .loading-title-background
+        Ok wait,
+        %br
+        This website
+        %br
+        is loading
+
     .background-fixer
 
       // DRAWER MENU
@@ -75,9 +90,9 @@
           © All rights reserved.
 
       // HEADER
-      %header.loading1.loading2
+      %header
         .loader
-          .logo.fadein
+          .logo
             .desktop
               Joaquín Lluis Montiel
             .mobile
@@ -136,6 +151,8 @@
             .description
               %img{:src => "img/description_icon.svg", :alt => ""}/
               The best subway app of Buenos Aires.
+              %br
+              %a{:href => "http://www.andenapp.com"}www.andenapp.com
             .tags
               %p Tags
               .tag Branding
@@ -192,34 +209,16 @@
 
       // OTHER JS
       %script
-        $(function() {
-        $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-        $('html, body').animate({
-        scrollTop: target.offset().top
-        }, 1000);
-        return false;
-        }
-        }
-        });
-        });
-
         $(window).load(function() {
         setTimeout(function(){
-        $('header').removeClass('loading1');
         //Init body animations
-        setTimeout(function(){
-        $('body').addClass('init-animations');
-        }, 1000);
-        //Execute header animation
-        setTimeout(function(){
-        $('header').removeClass('loading2');
-        }, 1000);
+        $('.loading').addClass('done');
+
         }, 2000);
         });
+
+
+
       // SVG
       %script
         // Elements to inject

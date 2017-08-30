@@ -32,22 +32,10 @@
 // INITIAL ANIMATIONS
 
 +desktop
-  .slider-box, .papers, .section-menu
-    display: none
-
-  .init-animations
-    .slider-box
-      +animation(appearfromright2 1s)
-      +animation-attr
-      display: flex
-    .papers
-      +animation(appearfromleft2 0.5s)
-      +animation-attr
-      display: flex
-    .section-menu
-      +animation(fadeintop2 1s)
-      +animation-attr
-      display: flex
+  .slider-box,
+  .papers,
+  .section-menu
+    display: flex
 
 // SLIDERS INFINIT ANIMATIONS
 .intro-wave-hand
@@ -158,6 +146,16 @@
   -ms-transform-origin: center
   -o-transform-origin: center
   -moz-transform-origin: center
+
++keyframes(loading-dots)
+  0%
+    background: rgba(255,255,255,1)
+    box-shadow: 14px 0px 0px rgba(255,255,255,.3), 28px 0px 0px rgba(255,255,255,.3)
+  50%
+    background: rgba(255,255,255,.3)
+    box-shadow: 14px 0px 0px rgba(255,255,255,1), 28px 0px 0px rgba(255,255,255,.3)
+  100%
+    box-shadow: 14px 0px 0px rgba(255,255,255,.3), 28px 0px 0px rgba(255,255,255,1)
 
 +keyframes(intro-wave-hand)
   0%

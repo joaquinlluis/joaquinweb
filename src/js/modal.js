@@ -5,6 +5,7 @@ $(document).ready(function(){
     $(CloseId).removeClass('active');
     $('.background-fixer').removeClass('modal-active');
     $('.swap-paper').removeClass('disappear');
+    $('.swap-paper').removeClass('active');
   });
 
   $('.modal-trigger').click(function(){
