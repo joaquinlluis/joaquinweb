@@ -126,6 +126,11 @@
               %a{:href => "#"} Music
 
       // MODAL CURRICULUM
+      .modal.cv#curriculum.active
+        .container
+          = partial 'curriculum'
+
+      // MODAL CURRICULUM
       .modal.curriculum#curriculum
         .container
           %a.close-button{"data-trigger" => "#curriculum", :href => "#"}
