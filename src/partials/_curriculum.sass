@@ -4,18 +4,58 @@
 	&:after
 		display: none
 
-
 .cv-wrapper
 	+desktop
 		padding-left: 30px
 
+.cv-section
+	display: flex
+	flex-flow: row wrap
+.cv-first-column
+	display: none
+	+desktop
+		display: block
+		flex: 2
+		padding-left: 40px
+.cv-second-column
+	flex: 3
+
 // NAVIGATION
 .cv-navigation
+	border-top: 2px solid #ccc
+	display: inline-block
+	padding-top: 45px
 
+	
+.cv-navigation ul
+	li
+		font-size: 20px
+		font-weight: 500
+		line-height: 50px
+		color: #CCCCCC
+		cursor: pointer
+		transition: all ease .5s
+		&:hover
+			color: #2A3339
+			padding-left: 50px
+		&.active
+			color: #2A3339
+			padding-left: 50px
 
 // INTRODUCTION
 .cv-introduction
 	padding: 100px 0px 40px 30px
+	position: relative
+	&:before
+		content: ''
+		width: 100%
+		height: 100%
+		background: #F7F7F7
+		position: absolute
+		top: 0
+		left: 0
+		+desktop
+			width: 555px
 	+desktop
 		padding: 100px 0px 100px 100px
 .cv-introduction-title
@@ -23,6 +63,9 @@
 	font-size: 36px
 	font-weight: 700
 	line-height: 39px
+	letter-spacing: -1px
+	z-index: 1
+	position: relative
 	+desktop
 		font-size: 72px
 		line-height: 79px
@@ -30,20 +73,188 @@
 .cv-introduction-subtitle
 	color: #999
 	font-size: 20px
-	font-weight: 600
+	font-weight: 500
 	line-height: 24px
 	letter-spacing: 4px
 	margin-top: 15px
+	z-index: 1
+	position: relative
 	+desktop
 		font-size: 24px
 		line-height: 29px
 		margin-top: 40px
 
+// LIST
+.cv-contact
+	margin-top: 40px
+	border-top: 2px solid #eee
+.cv-list
+	padding-top: 40px
+.cv-list-item
+	padding-left: 30px
+	margin-bottom: 20px
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		width: 6px
+		height: 6px
+		left: 0
+		top: 6px
+		border: 2px solid #333
+		border-radius: 8px
+.cv-list-item-title
+	font-size: 18px
+	color: #333
+	font-weight: 500
+	line-height: 22px
+	margin-bottom: 2px
+
+.cv-list-item-description
+	font-size: 16px
+	line-height: 20px
+	color: #666666
+
+
+// PERSONAL INFO
+
+.cv-personal-info
+	.cv-first-column
+		background: #F7F7F7
+	.cv-separator
+		background: #F7F7F7
+		height: 100px
+		width: 100%
+
+.cv-information
+	padding: 40px 30px 60px 30px
+	+desktop
+		padding: 100px 0px 100px 100px
+.cv-biography
+	max-width: 260px
+	font-size: 16px
+	line-height: 26px
+	color: #666666
 
 // EDUCATION SKILLS
 
+.cv-education-skills
+	.cv-first-column
+		background: #F7F7F7
+	.cv-list-item:after
+		border-radius: 0
+
+.cv-my-education
+	width: 100%
+	padding: 60px 30px
+	+desktop
+		padding: 60px 40px 100px 40px
+.cv-uppercase-title
+	font-size: 16px
+	font-weight: 600
+	color: #CCCCCC
+	letter-spacing: 2px
+
+.cv-my-skills
+	padding: 60px 30px
+	+desktop
+		padding: 0 0 100px 100px
+.cv-my-skills-image
+	margin-top: 0!important
+	margin-bottom: 60px!important
+	+desktop
+		margin-top: -45%!important
+
 // WORK EXPERIENCE
+.cv-work-experience
+
+.cv-work-experience-title-section
+	width: 100%
+	background: #2A3339
+.cv-work-experience-title
+	font-size: 52px
+	font-weight: 600
+	color: #FFFFFF
+	line-height: 50px
+	padding: 100px 0 120px 30px 
+	position: relative
+	+desktop
+		padding: 100px 0 220px 100px
+	&:after
+		content: '∞'
+		position: absolute
+		bottom: 40px
+		left: 30px
+		color: #FFFFFF
+		opacity: .5
+		font-size: 60px
+		font-weight: 400
+		line-height: 60px
+		+desktop
+			left: 100px
+			bottom: 90px
+.cv-my-work
+	background: #2A3339
+	padding-bottom: 60px
+
+.cv-my-jobs
+	padding: 60px 30px
+	+desktop
+		padding: 0 0 100px 100px
+
 
 // HOBBIES
+
+.cv-hobbies
+	.cv-first-column
+		background: #f7f7f7
+	.cv-first-column,
+	.cv-second-column
+		padding-top: 60px
+		+desktop
+			padding-top: 100px
+.cv-my-hobbies
+	padding: 60px 30px
+	+desktop
+		padding: 0 0 100px 100px
+.cv-my-hobbies-title
+	font-size: 72px
+	font-weight: 600
+	letter-spacing: -1px
+	line-height: 69px
+	color: #2A3339
+	position: relative
+	padding-top: 30px
+	margin-top: 60px
+	&:after
+		content: '…'
+		position: absolute
+		top: -60px
+		left: 0
+		color: #ccc
+
+.cv-my-hobbies-subtitle
+	font-size: 24px
+	font-weight: 500
+	color: #999
+	letter-spacing: 5px
+	padding-bottom: 60px
+	margin: 20px 0 60px 0
+	border-bottom: 2px solid #eee
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
