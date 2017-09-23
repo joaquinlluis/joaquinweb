@@ -196,11 +196,57 @@
 .cv-my-work
 	background: #2A3339
 	padding-bottom: 60px
+	.cv-navigation ul li
+		&:hover,
+		&.active
+			color: #fff
 
 .cv-my-jobs
 	padding: 60px 30px
 	+desktop
 		padding: 0 0 100px 100px
+	.cv-list-item
+		padding: 20px 20px 20px 30px
+		background: #fff
+		transition: all ease .5s
+		&:after
+			width: 3px
+			height: 100%
+			top: 0
+			background: #9BA9BB
+			border: none
+		&:hover
+			transform: scale(1.1,1.1)
+			.cv-list-item-description span
+				padding-left: 20px
+	.cv-list-item-title
+		width: 100%
+		span
+			font-size: 13px
+			color: #999999
+			letter-spacing: 1px
+			line-height: 22px
+			float: right
+	.cv-list-item-description
+		span
+			display: block
+			font-style: italic
+			padding-left: 13px
+			position: relative
+			transition: all ease .5s
+			&:after
+				content: ''
+				width: 5px
+				height: 5px
+				transform: rotate(45deg)
+				border-top: 2px solid #ccc
+				border-right: 2px solid #ccc
+				position: absolute
+				top: 7px
+				left: 0
+	.cv-uppercase-title
+		color: #fff
+		opacity: .5
 
 
 // HOBBIES
@@ -242,8 +288,25 @@
 	margin: 20px 0 60px 0
 	border-bottom: 2px solid #eee
 
-
-
+.cv-my-hobbies
+	.cv-list-item
+		display: flex
+		padding: 0
+		&:after
+			display: none
+	.cv-list-item-group
+		padding-left: 20px
+	.cv-list-item-circle
+		display: inline-block
+		padding: 15px 0
+		text-align: center
+		width: 52px
+		height: 52px
+		background: #F0F0F0
+		color: #CCCCCC
+		font-size: 18px
+		font-weight: 600
+		border-radius: 50px
 
 
 
