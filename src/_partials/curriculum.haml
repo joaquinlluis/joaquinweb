@@ -10,14 +10,18 @@
 			a Digital Dēsigner
 		.cv-introduction-subtitle
 			From Buenos Aires
-	.cv-section.cv-personal-info
+	.cv-section.cv-personal-info#personal-info
 		.cv-first-column
 			.cv-navigation
 				%ul
-					%li.active Personal Information
-					%li Education & Skills
-					%li Work Experience
-					%li Hobbies
+					%a{:href => "#personal-info"}
+						%li.active Personal Information
+					%a{:href => "#education"}
+						%li Education & Skills
+					%a{:href => "#work-experience"}
+						%li Work Experience
+					%a{:href => "#hobbies"}
+						%li Hobbies
 		.cv-second-column
 			.cv-information
 				.cv-biography
@@ -49,7 +53,7 @@
 								http://www.joaquinlluis.com/
 
 		.cv-separator
-	.cv-section.cv-education-skills
+	.cv-section.cv-education-skills#education
 		.cv-my-education
 			.cv-uppercase-title
 				MY EDUCATION
@@ -85,10 +89,14 @@
 		.cv-first-column
 			.cv-navigation
 				%ul
-					%li Personal Information
-					%li.active Education & Skills
-					%li Work Experience
-					%li Hobbies
+					%a{:href => "#personal-info"}
+						%li Personal Information
+					%a{:href => "#education"}
+						%li.active Education & Skills
+					%a{:href => "#work-experience"}
+						%li Work Experience
+					%a{:href => "#hobbies"}
+						%li Hobbies
 		.cv-second-column
 			.cv-my-skills
 				%img.cv-my-skills-image{:src => "img/nerd.svg"}
@@ -135,7 +143,7 @@
 							%br
 							I’m a native spanish speaker.
 
-	.cv-work-experience
+	.cv-work-experience#work-experience
 		.cv-work-experience-title-section.cv-section
 			.cv-first-column
 			.cv-second-column
@@ -152,34 +160,38 @@
 			.cv-first-column
 				.cv-navigation
 					%ul
-						%li Personal Information
-						%li Education & Skills
-						%li.active Work Experience
-						%li Hobbies
+						%a{:href => "#personal-info"}
+							%li Personal Information
+						%a{:href => "#education"}
+							%li Education & Skills
+						%a{:href => "#work-experience"}
+							%li.active Work Experience
+						%a{:href => "#hobbies"}
+							%li Hobbies
 
 			.cv-second-column
 				.cv-my-jobs
 					.cv-uppercase-title
 						HIGHLIGHTED PERSONAL WORK
 					%ul.cv-list
-						%li.cv-list-item
-							%a{:href => "www.pickinstudio.com"}
+						%a{:href => "www.pickinstudio.com"}
+							%li.cv-list-item
 								.cv-list-item-title
 									Pickin Studio
 									%span 2012 / Today
 								.cv-list-item-description
 									Co Founder of Pickin Design Studio
 									%span www.pickinstudio.com
-						%li.cv-list-item
-							%a{:href => "www.catedracosgaya.com.ar"}
+						%a{:href => "www.catedracosgaya.com.ar"}
+							%li.cv-list-item
 								.cv-list-item-title
 									Cátedra Cosgaya
 									%span 2013 / Today
 								.cv-list-item-description
 									Typography Proffesor in University of Buenos Aires
 									%span www.catedracosgaya.com.ar
-						%li.cv-list-item
-							%a{:href => "www.andenapp.com"}
+						%a{:href => "www.andenapp.com"}
+							%li.cv-list-item
 								.cv-list-item-title
 									Anden app
 									%span 2015 / Today
@@ -191,38 +203,42 @@
 					.cv-uppercase-title
 						HIRED WORK
 					%ul.cv-list
-						%li.cv-list-item
-							%a{:href => "www.raffles.com.ar"} 
+						%a{:href => "www.raffles.com.ar"}
+							%li.cv-list-item
 								.cv-list-item-title
 									Raffles
 									%span 2013 / 2015
 								.cv-list-item-description
 									UX UI Designer & Frontend Developer
 									%span www.raffles.com.ar
-						%li.cv-list-item
-							%a{:href => "www.restorando.com"}
+						%a{:href => "www.restorando.com"}
+							%li.cv-list-item
 								.cv-list-item-title
 									Restorando
 									%span 2015 / 2016
 								.cv-list-item-description
 									UX UI Designer
 									%span www.restorando.com
-						%li.cv-list-item
-							%a{:href => "www.mercadolibre.com"}
+						%a{:href => "www.mercadolibre.com"}
+							%li.cv-list-item
 								.cv-list-item-title
 									Mercado Libre
 									%span 2016 / Today
 								.cv-list-item-description
 									UX UI Designer at Mercado Pago
 									%span www.mercadolibre.com
-	.cv-section.cv-hobbies
+	.cv-section.cv-hobbies#hobbies
 		.cv-first-column
 			.cv-navigation
 				%ul
-					%li Personal Information
-					%li Education & Skills
-					%li Work Experience
-					%li.active Hobbies
+					%a{:href => "#personal-info"}
+						%li Personal Information
+					%a{:href => "#education"}
+						%li Education & Skills
+					%a{:href => "#work-experience"}
+						%li Work Experience
+					%a{:href => "#hobbies"}
+						%li.active Hobbies
 		.cv-second-column
 			.cv-my-hobbies
 				.cv-uppercase-title

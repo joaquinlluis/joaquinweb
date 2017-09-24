@@ -126,14 +126,15 @@
               %a{:href => "#"} Music
 
       // MODAL CURRICULUM
-      .modal.cv#curriculum.active
+      .modal.cv#curriculum
         .container
+          %a.close-button{"data-trigger" => "#curriculum", :href => "#"}
           = partial 'curriculum'
 
       // MODAL CURRICULUM
-      .modal.curriculum#curriculum
+      .modal.curriculum#curriculum-old
         .container
-          %a.close-button{"data-trigger" => "#curriculum", :href => "#"}
+          %a.close-button{"data-trigger" => "#curriculum-old", :href => "#"}
           %h2
             Do you want to
             %br/
