@@ -20,13 +20,104 @@
 .cv-second-column
 	flex: 3
 
+// CV DOWNLOAD
+.cv-download-container
+	position: fixed
+	bottom: 20px
+	left: 50%
+	width: 100%
+	max-width: 940px
+	transform: translateX(-50%)
+	z-index: 2
+	padding: 0 30px
+	+desktop
+		bottom: 80px
+.cv-download
+	display: inline-block
+	width: 262px
+	overflow: hidden
+	background: #2A3339
+	border-radius: 50px
+	box-shadow: 0 0 30px rgba(0,0,0,0.5)
+	+animation(fadein 0.6s)
+	+animation(cv-download-button .6s)
+	+animation-attr
+	-webkit-animation-fill-mode: none
+	-moz-animation-fill-mode: none
+	-o-animation-fill-mode: none
+	-ms-animation-fill-mode: none
+	animation-fill-mode: none
+	transition: all ease .5s
+	&:hover
+		transform: scale(1.05,1.05)
+	&.collapsed
+		width: 65px
+		border-radius: 0 50px 50px 0
+		margin-left: -30px
+		&:hover
+			cursor: pointer
+			transform-origin: left center 
+		.cv-download-link,
+		.cv-download-close
+			opacity: 0
+
+.cv-download-elements
+	display: inline-block
+	white-space: nowrap
+	padding: 5px 80px 5px 60px
+	position: relative
+.cv-download-image
+	position: absolute
+	width: 32px
+	height: 32px
+	margin: 0!important
+	bottom: 14px
+	left: 15px
+.cv-download-link
+	font-size: 18px
+	font-weight: 600
+	color: #FFF
+	line-height: 50px
+	transition: all ease .5s
+	&:hover
+		text-decoration: underline
+.cv-download-close
+	position: absolute
+	top: 14px
+	right: 15px
+	width: 32px
+	height: 32px
+	background: rgba(255,255,255,0.1)
+	border-radius: 32px
+	transition: all ease .5s
+	&:hover
+		background: rgba(255,255,255,0.15)
+		transform: rotate(-90deg)
+	&:after,
+	&:before
+		content: ''
+		position: absolute
+		top: 15px
+		left: 9px
+		width: 15px
+		height: 2px
+		border-radius: 3px
+		background: #fff
+		transform: rotate(45deg)
+	&:before
+		transform: rotate(-45deg)
+
+
+
+
+
+
 // NAVIGATION
 .cv-navigation
 	border-top: 2px solid #ccc
 	display: inline-block
 	padding-top: 45px
 
-	
 .cv-navigation ul
 	li
 		font-size: 20px
@@ -150,7 +241,7 @@
 	.cv-first-column
 		background: #F7F7F7
 	.cv-separator
-		background: #F7F7F7
+		background: #F7F7F7 url(img/cv-texture.svg) repeat-x top right
 		height: 100px
 		width: 100%
 
@@ -198,7 +289,7 @@
 
 .cv-work-experience-title-section
 	width: 100%
-	background: #2A3339
+	background: #2A3339 url(img/cv-texture.svg) repeat-x top right
 .cv-work-experience-title
 	font-size: 52px
 	font-weight: 600

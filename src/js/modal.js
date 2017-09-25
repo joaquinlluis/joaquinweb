@@ -7,6 +7,13 @@ $(document).ready(function(){
     $('.swap-paper').removeClass('disappear');
     $('.swap-paper').removeClass('active');
   });
+  $('.cv-download-close').click(function(event){
+    event.stopPropagation()
+    $('.cv-download').addClass('collapsed');
+  });
+  $('.cv-download-elements').click(function(){
+    $('.collapsed').removeClass('collapsed');
+  });
 
   $('.modal-trigger').click(function(){
     sectionId = $(this).data('trigger');

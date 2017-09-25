@@ -127,25 +127,17 @@
 
       // MODAL CURRICULUM
       .modal.cv#curriculum
+        .cv-download-container
+          .cv-download
+            .cv-download-elements
+              %img.cv-download-image{:src => "img/cv-download.svg", :width => "30"}
+              %a.cv-download-link{:href => "JOAQUINLLUIS-CV.pdf", :type => "download"}
+                Descargar .pdf
+              %a.cv-download-close
+
         .container
           %a.close-button{"data-trigger" => "#curriculum", :href => "#"}
           = partial 'curriculum'
-
-      // MODAL CURRICULUM
-      .modal.curriculum#curriculum-old
-        .container
-          %a.close-button{"data-trigger" => "#curriculum-old", :href => "#"}
-          %h2
-            Do you want to
-            %br/
-            see more?
-          .flex
-            .description
-              %p
-                Oh! Thanks! Thats flattering,  here you can download my curriculum
-              %a{:href => "JOAQUINLLUIS-CV.pdf", :type => "download"}
-                %button
-                  DOWNLOAD CV
 
       // MODAL WORKS
       .modal#project1-modal
